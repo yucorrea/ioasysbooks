@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { setFilters } from '../../store/books/actions';
 import theme from '../../global/theme';
 
 import { Modal } from '../Modal';
@@ -21,44 +22,25 @@ import {
   ButtonFilter,
 } from './styles';
 
+import { useDispatch } from 'react-redux';
+
 export function Filter() {
   const [search, setSearch] = useState('');
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedYears, setSelectedYears] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [selectedYear, setSelectedYear] = useState<number>(null);
 
   const [modal, setModal] = useState(false);
 
-  const handleInputSearch = useCallback(() => {}, []);
+  const dispatch = useDispatch();
 
-  const handleApplyFilters = useCallback(() => {}, []);
+  const handleInputSearch = useCallback(() => {
+    dispatch(setFilters({ search: search }));
+  }, [dispatch, search]);
 
-  const handleSelectedCategory = useCallback(
-    (category: string) => {
-      const alreadyExists = selectedCategories.includes(category);
-
-      if (alreadyExists) {
-        setSelectedCategories(
-          selectedCategories.filter(item => item !== category),
-        );
-      } else {
-        setSelectedCategories(state => [...state, category]);
-      }
-    },
-    [selectedCategories],
-  );
-
-  const handleSelectedYear = useCallback(
-    (year: string) => {
-      const alreadyExists = selectedYears.includes(year);
-
-      if (alreadyExists) {
-        setSelectedYears(selectedYears.filter(item => item !== year));
-      } else {
-        setSelectedYears(state => [...state, year]);
-      }
-    },
-    [selectedYears],
-  );
+  const handleApplyFilters = useCallback(() => {
+    dispatch(setFilters({ year: selectedYear, category: selectedCategory }));
+    setModal(false);
+  }, [dispatch, selectedCategory, selectedYear]);
 
   return (
     <>
@@ -88,12 +70,14 @@ export function Filter() {
             {categories.map(option => (
               <FilterButton
                 key={option.id.toString()}
-                selected={selectedCategories.includes(option.value)}
-                onPress={() => handleSelectedCategory(option.value)}
+                selected={option.value === selectedCategory}
+                onPress={() =>
+                  selectedCategory
+                    ? setSelectedCategory('')
+                    : setSelectedCategory(option.value)
+                }
               >
-                <FilterButtonText
-                  selected={selectedCategories.includes(option.value)}
-                >
+                <FilterButtonText selected={option.value === selectedCategory}>
                   {option.value}
                 </FilterButtonText>
               </FilterButton>
@@ -105,12 +89,14 @@ export function Filter() {
             {years.map(option => (
               <FilterButton
                 key={option.id.toString()}
-                selected={selectedYears.includes(option.value)}
-                onPress={() => handleSelectedYear(option.value)}
+                selected={option.value === selectedYear}
+                onPress={() =>
+                  selectedYear
+                    ? setSelectedYear('')
+                    : setSelectedYear(option.value)
+                }
               >
-                <FilterButtonText
-                  selected={selectedYears.includes(option.value)}
-                >
+                <FilterButtonText selected={option.value === selectedYear}>
                   {option.value}
                 </FilterButtonText>
               </FilterButton>
