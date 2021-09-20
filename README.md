@@ -14,7 +14,7 @@
 </p>
 
 ## Ioasys Books
-
+<img src="./github/banner.png" alt="Banner">
 ## :rocket: Tecnologias
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
