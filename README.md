@@ -37,7 +37,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ```bash
 
 # Clone o repositório
-$ https://github.com/yucorrea/ioasysbooks.git
+$ git clone https://github.com/yucorrea/ioasysbooks.git
 
 # Navegue até a raiz do projeto
 $ cd ioasysbooks
