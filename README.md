@@ -8,8 +8,8 @@
 
 <p align="center">
    <a href="#ioasys-books">Ioasys Books</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#art-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -37,7 +37,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ```bash
 
 # Clone o repositório
-$ https://github.com/yucorrea/ioasysbooks.git
+$ git clone https://github.com/yucorrea/ioasysbooks.git
 
 # Navegue até a raiz do projeto
 $ cd ioasysbooks
