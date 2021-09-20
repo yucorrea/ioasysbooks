@@ -4,7 +4,7 @@ export const Container = styled.SafeAreaView`
   flex: 1;
   width: 100%;
   padding: 16px;
-  background: ${({ theme }) => theme.colors.background};
+  background: #f6f5ef;
 `;
 
 export const Header = styled.View`
