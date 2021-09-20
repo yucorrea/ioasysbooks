@@ -10,7 +10,11 @@ export function AppRoutes() {
   return (
     <Navigator>
       <Screen name="Home" component={Home} options={{ headerShown: false }} />
-      <Screen name="BookDetail" component={BookDetail} />
+      <Screen
+        name="BookDetail"
+        component={BookDetail}
+        options={{ headerShown: false }}
+      />
     </Navigator>
   );
 }
