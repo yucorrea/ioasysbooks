@@ -21,7 +21,7 @@ export function Home() {
   const { books, page, totalPages, loading, filter: { category, year, search } } = useSelector((state: RootState) => state.books);
 
   useEffect(() => {
-    dispatch(GET_BOOKS({category: undefined, search: '', year: undefined}));
+    dispatch(GET_BOOKS({category: undefined, search: '', year: undefined, page: 1}));
   }, [dispatch]);
 
   const handleLogout = useCallback(() => {
@@ -30,7 +30,8 @@ export function Home() {
 
   const loadMore = useCallback(() => {
     if (page <= totalPages) {
-      dispatch(GET_BOOKS({category, year, search, loadMore: true}));
+      let currentPage = page + 1;
+      dispatch(GET_BOOKS({category, year, search, page: currentPage}));
     }
   }, [totalPages, page, dispatch]);
 
@@ -57,7 +58,7 @@ export function Home() {
         keyExtractor={item => item.id}
         renderItem={({ item }) => <Book data={item} />}
         onEndReached={loadMore}
-        onEndReachedThreshold={0}
+        onEndReachedThreshold={0.1}
         ListFooterComponent={renderFooter}
       />
     </Container>

@@ -20,7 +20,7 @@ const initialState: INITIAL_STATE = {
   error: '',
   books: [],
   page: 1,
-  amount: 10,
+  amount: 25,
   totalPages: 0,
   filter: {
     category: undefined,
@@ -34,7 +34,7 @@ interface FilterData {
   search?: string;
   year?: string;
   category?: string;
-  loadMore?: boolean;
+  page: number;
 }
 
 const booksSlice = createSlice({
@@ -49,7 +49,7 @@ const booksSlice = createSlice({
     },
     GET_BOOKS_SUCCESS: (state, { payload }: PayloadAction<any>) => {
       state.loading = false;
-      state.books = payload.books;
+      state.books = state.page === 1 ? payload.books : [...state.books, ...payload.books];
       state.totalPages = payload.totalPages;
       state.page = payload.page;
     },

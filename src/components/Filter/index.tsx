@@ -34,7 +34,7 @@ export function Filter() {
   const dispatch = useDispatch();
 
   const handleInputSearch = useCallback(() => {
-    dispatch(GET_BOOKS({ search }));
+    dispatch(GET_BOOKS({ search, page: 1 }));
   }, [dispatch, search]);
 
   const handleApplyFilters = useCallback(() => {

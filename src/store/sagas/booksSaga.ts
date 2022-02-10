@@ -13,30 +13,24 @@ interface FilterData {
     search?: string;
     year?: string;
     category?: string;
-    loadMore?: boolean;
+    page: number;
 }
 
 function* getAllBooks({payload} : PayloadAction<FilterData>) {
   try {
 
-    const { search, year, category, loadMore } = payload;
+    const { search, year, category, page = 1 } = payload;
 
     //@ts-ignore
     const { user, books } = yield select((state: RootState) => state);
     const { token } = user;
-    const { page, amount } = books;
-
-    let currentPage = 1;
-
-    if(loadMore) {
-      currentPage = page + 1;
-    }
+    const { amount } = books;
 
     //@ts-ignore
     const response = yield call(api.get, '/books', {
       headers: { Authorization: `Bearer ${token}` },
       params: {
-        page: currentPage,
+        page,
         amount,
         title: search,
         category,
@@ -44,24 +38,11 @@ function* getAllBooks({payload} : PayloadAction<FilterData>) {
       },
     });
 
-
-    if(loadMore) {
-      yield put(
-        GET_BOOKS_SUCCESS({
-          books: [...books.books, ...response.data.data],
-          totalPages: response.data.totalPages,
-          page: currentPage
-        }),
-      );
-
-      return
-    }
-
     yield put(
       GET_BOOKS_SUCCESS({
         books: response.data.data,
         totalPages: response.data.totalPages,
-        page: currentPage,
+        page,
       }),
     );
 
