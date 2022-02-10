@@ -1,18 +1,20 @@
+import { PayloadAction } from '@reduxjs/toolkit';
 import { Alert } from 'react-native';
-import { call, takeLatest, all, put } from 'redux-saga/effects';
+import { call, put, takeEvery } from 'redux-saga/effects';
 import api from '../../services/api';
 
-import { signInFailure, signInSuccess } from './actions';
-import { AUTH_LOGIN_REQUESTED } from './types';
+import {
+  LOGIN,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
+} from '../slices/userSlice';
 
 interface Credentials {
-  payload: {
     email: string;
     password: string;
-  };
 }
 
-function* signIn({ payload }: Credentials) {
+function* signIn({ payload }: PayloadAction<Credentials>) {
   try {
     const { email, password } = payload;
 
@@ -26,19 +28,20 @@ function* signIn({ payload }: Credentials) {
 
     api.defaults.headers.Authorization = `Bearer ${authorization}`;
 
-    yield put(signInSuccess(response.data, authorization));
+
+    yield put(LOGIN_SUCCESS({
+      user: response.data,
+      token: authorization
+    }));
   } catch (err) {
     Alert.alert('Falha na autenticação', 'Verique suas credenciais');
-    yield put(signInFailure());
+    yield put(LOGIN_FAILURE('Falha na autenticação'));
   }
 }
 
-function* watchSignIn() {
-  yield takeLatest(AUTH_LOGIN_REQUESTED, signIn);
+export default function* watchSignIn() {
+  yield takeEvery(LOGIN, signIn);
 }
 
-function* root() {
-  yield all([watchSignIn()]);
-}
 
-export default root;
+

@@ -6,7 +6,7 @@ import { Container, Wrapper, Logo, Title, Form } from './styles';
 import logo from './../../assets/Logo.png';
 
 import { Input } from '../../components/Input';
-import { signIn } from '../../store/auth/actions';
+import { LOGIN } from '../../store/slices/userSlice';
 
 export function SignIn() {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ export function SignIn() {
   const [password, setPassword] = useState('');
 
   const handleLogin = useCallback(() => {
-    dispatch(signIn(email, password));
+    dispatch(LOGIN({email, password}));
   }, [email, password, dispatch]);
 
   return (

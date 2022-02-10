@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import { setFilters } from '../../store/books/actions';
+import { GET_BOOKS } from '../../store/slices/booksSlice';
 import theme from '../../global/theme';
 
 import { Modal } from '../Modal';
@@ -34,11 +34,11 @@ export function Filter() {
   const dispatch = useDispatch();
 
   const handleInputSearch = useCallback(() => {
-    dispatch(setFilters({ search: search }));
+    dispatch(GET_BOOKS({ search }));
   }, [dispatch, search]);
 
   const handleApplyFilters = useCallback(() => {
-    dispatch(setFilters({ year: selectedYear, category: selectedCategory }));
+    // dispatch(setFilters({ year: selectedYear, category: selectedCategory }));
     setModal(false);
   }, [dispatch, selectedCategory, selectedYear]);
 
