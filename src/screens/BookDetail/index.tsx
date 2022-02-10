@@ -1,27 +1,10 @@
-import { useNavigation } from '@react-navigation/core';
-import { ScrollView } from 'react-native';
 import React from 'react';
-import { IconButton } from '../../components/IconButton';
+import { useNavigation, useRoute } from '@react-navigation/core';
+import { ScrollView } from 'react-native';
+import styled from 'styled-components/native';
 
 import mark from '../../assets/mark.png';
-
-import {
-  Container,
-  Book,
-  Wrapper,
-  Title,
-  AuthorsContainer,
-  Author,
-  InformationContainer,
-  InformationTitle,
-  Detail,
-  Left,
-  Right,
-  ReviewContainer,
-  Description,
-  AbsoluteWrapper,
-  Mark,
-} from './styles';
+import { IconButton } from '../../components/IconButton';
 
 interface Book {
   imageUrl: string;
@@ -37,75 +20,171 @@ interface Book {
   description: string;
 }
 
-export function BookDetail({ route }) {
+interface BookParams {
+ book: Book;
+}
+
+export function BookDetail() {
   const { goBack } = useNavigation();
+  const route = useRoute();
 
-  const { book } = route.params;
+  const { book } = route.params as BookParams;
   return (
-    <Container>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <IconButton icon="arrow-back-outline" onPress={() => goBack()} />
+    <StyledContainer>
+      <StyledScreen>
+      <IconButton icon="arrow-back-outline" onPress={() => goBack()} />
+        <StyledWrapper>
+          <StyledBook source={{ uri: book.imageUrl }} resizeMode="contain" />
+          <StyledTitle numberOfLines={2}>{book.title}</StyledTitle>
+          <StyledAuthorsContainer>
+            <StyledAuthor>{book.authors.toString()}</StyledAuthor>
+          </StyledAuthorsContainer>
 
-        <Wrapper>
-          <Book source={{ uri: book.imageUrl }} resizeMode="contain" />
-          <Title numberOfLines={2}>{book.title}</Title>
-          <AuthorsContainer>
-            <Author>{book.authors.toString()}</Author>
-          </AuthorsContainer>
+          <StyledInformationContainer>
+            <StyledInformationTitle>Informações</StyledInformationTitle>
+            <StyledDetail>
+              <StyledLeft>Páginas</StyledLeft>
+              <StyledRight>{book.pageCount} páginas</StyledRight>
+            </StyledDetail>
 
-          <InformationContainer>
-            <InformationTitle>Informações</InformationTitle>
-            <Detail>
-              <Left>Páginas</Left>
-              <Right>{book.pageCount} páginas</Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>Editora</StyledLeft>
+              <StyledRight>{book.publisher}</StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>Editora</Left>
-              <Right>{book.publisher}</Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>Publicação</StyledLeft>
+              <StyledRight>{book.published}</StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>Publicação</Left>
-              <Right>{book.published}</Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>Idioma</StyledLeft>
+              <StyledRight>{book.language}</StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>Idioma</Left>
-              <Right>{book.language}</Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>Título Original</StyledLeft>
+              <StyledRight>{book.title} </StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>Título Original</Left>
-              <Right>{book.title} </Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>ISBN-10</StyledLeft>
+              <StyledRight>{book.isbn10} </StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>ISBN-10</Left>
-              <Right>{book.isbn10} </Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>ISBN-13</StyledLeft>
+              <StyledRight>{book.isbn13} </StyledRight>
+            </StyledDetail>
 
-            <Detail>
-              <Left>ISBN-13</Left>
-              <Right>{book.isbn13} </Right>
-            </Detail>
+            <StyledDetail>
+              <StyledLeft>Categoria</StyledLeft>
+              <StyledRight>{book.category}</StyledRight>
+            </StyledDetail>
+          </StyledInformationContainer>
 
-            <Detail>
-              <Left>Categoria</Left>
-              <Right>{book.category}</Right>
-            </Detail>
-          </InformationContainer>
+          <StyledReviewContainer>
+            <StyledInformationTitle>Resenha da Editora</StyledInformationTitle>
 
-          <ReviewContainer>
-            <InformationTitle>Resenha da Editora</InformationTitle>
-
-            <AbsoluteWrapper>
-              <Mark source={mark} />
-              <Description> {book.description}</Description>
-            </AbsoluteWrapper>
-          </ReviewContainer>
-        </Wrapper>
-      </ScrollView>
-    </Container>
+            <StyledAbsoluteWrapper>
+              <StyledMark source={mark} />
+              <StyledDescription> {book.description}</StyledDescription>
+            </StyledAbsoluteWrapper>
+          </StyledReviewContainer>
+        </StyledWrapper>
+      </StyledScreen>
+    </StyledContainer>
   );
 }
+
+export const StyledContainer = styled.SafeAreaView`
+  flex: 1;
+  background: ${({ theme }) => theme.colors.background};
+`;
+export const StyledScreen = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator:false,
+  contentContainerStyle: {
+    paddingHorizontal: 16,
+    paddingTop: 16
+  }
+})``;
+
+export const StyledBook = styled.Image`
+  height: 351px;
+  margin-top: 12px;
+  margin-bottom: 24px; ;
+`;
+
+export const StyledWrapper = styled.View`
+  padding: 12px 40px 40px 40px;
+`;
+
+export const StyledTitle = styled.Text`
+  font-size: 28px;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.title};
+`;
+
+export const StyledAuthorsContainer = styled.View`
+  flex-direction: row;
+`;
+
+export const StyledAuthor = styled.Text`
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.primary_light};
+`;
+
+export const StyledInformationContainer = styled.View`
+  margin-top: 32px;
+`;
+
+export const StyledInformationTitle = styled.Text`
+  margin-bottom: 14px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.title};
+`;
+
+export const StyledDetail = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 4px 0px;
+`;
+
+export const StyledLeft = styled.Text`
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.medium};
+  color: ${({ theme }) => theme.colors.title};
+`;
+
+export const StyledRight = styled.Text`
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+export const StyledReviewContainer = styled.View`
+  width: 100%;
+  margin-top: 16px;
+`;
+
+export const StyledAbsoluteWrapper = styled.View`
+  width: 95%;
+  flex-direction: row;
+`;
+
+export const StyledDescription = styled.Text`
+  align-items: baseline;
+  text-align: justify;
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.text};
+`;
+
+export const StyledMark = styled.Image`
+  margin-bottom: 4px;
+`;

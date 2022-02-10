@@ -1,18 +1,16 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Home } from '../screens/Home';
-import { BookDetail } from '../screens/BookDetail';
+import { SignIn } from '../screens/SignIn';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
-export function AppRoutes() {
+export function AuthStack() {
   return (
     <Navigator>
-      <Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Screen
-        name="BookDetail"
-        component={BookDetail}
+        name="SignIn"
+        component={SignIn}
         options={{ headerShown: false }}
       />
     </Navigator>

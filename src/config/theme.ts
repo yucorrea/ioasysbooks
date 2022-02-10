@@ -3,7 +3,7 @@ export default {
     primary: '#B22E6F',
     primary_light: '#AB2680',
 
-    background: '#FFFFFF',
+    background: '#f6f5ef',
     border: 'rgba(51, 51, 51, 0.2)',
 
     title: '#333333',
