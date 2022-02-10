@@ -1,10 +1,8 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
-import { useTheme } from 'styled-components/native';
+import styled, { useTheme } from 'styled-components/native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
-import { Container } from './styles';
 
 interface Props extends TouchableOpacityProps {
   onPress(): void;
@@ -16,8 +14,17 @@ export function IconButton({ onPress, icon, ...rest }: Props) {
   const { colors } = useTheme();
 
   return (
-    <Container {...rest} onPress={onPress}>
+    <StyledContainer {...rest} onPress={onPress}>
       <Icon name={icon} size={16} color={colors.title} />
-    </Container>
+    </StyledContainer>
   );
 }
+
+export const StyledContainer = styled.TouchableOpacity`
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  border-radius: 16px;
+`;
