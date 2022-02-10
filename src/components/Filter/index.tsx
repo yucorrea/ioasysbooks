@@ -1,9 +1,8 @@
 import React, { useState, useCallback } from 'react';
-
+import { useTheme } from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { setFilters } from '../../store/books/actions';
-import theme from '../../config/theme';
 
 import { Modal } from '../Modal';
 
@@ -31,6 +30,7 @@ export function Filter() {
 
   const [modal, setModal] = useState(false);
 
+  const { colors } = useTheme();
   const dispatch = useDispatch();
 
   const handleInputSearch = useCallback(() => {
@@ -48,18 +48,18 @@ export function Filter() {
         <InputContainer>
           <Input
             placeholder="Procure um livro"
-            placeholderTextColor={theme.colors.text}
+            placeholderTextColor={colors.text}
             value={search}
             onChangeText={e => setSearch(e)}
             onSubmitEditing={handleInputSearch}
           />
           <SearchButton onPress={handleInputSearch}>
-            <Icon name="search-outline" size={24} color={theme.colors.title} />
+            <Icon name="search-outline" size={24} color={colors.title} />
           </SearchButton>
         </InputContainer>
 
         <OptionButton onPress={() => setModal(true)}>
-          <Icon color={theme.colors.title} name="options-outline" size={24} />
+          <Icon color={colors.title} name="options-outline" size={24} />
         </OptionButton>
       </Container>
 

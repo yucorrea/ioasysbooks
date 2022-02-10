@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
+import { useTheme } from 'styled-components/native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import theme from '../../config/theme';
 
 import { Container } from './styles';
 
@@ -12,9 +12,12 @@ interface Props extends TouchableOpacityProps {
 }
 
 export function IconButton({ onPress, icon, ...rest }: Props) {
+
+  const { colors } = useTheme();
+
   return (
     <Container {...rest} onPress={onPress}>
-      <Icon name={icon} size={16} color={theme.colors.title} />
+      <Icon name={icon} size={16} color={colors.title} />
     </Container>
   );
 }
