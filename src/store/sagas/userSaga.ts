@@ -1,7 +1,7 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Alert } from 'react-native';
-import { call, put, takeEvery } from 'redux-saga/effects';
-import api from '../../services/api';
+import { call, takeEvery, put } from 'redux-saga/effects';
+import api from '../../config/api';
 
 import {
   LOGIN,

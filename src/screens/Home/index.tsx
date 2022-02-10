@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
 import { ActivityIndicator, FlatList } from 'react-native';
+import { useTheme } from 'styled-components/native';
 
 import { Container, Header, Wrapper, Logo, Title } from './styles';
 
@@ -12,10 +13,11 @@ import { GET_BOOKS } from '../../store/slices/booksSlice';
 import { LOGOUT } from '../../store/slices/userSlice';
 
 import { Book } from '../../components/Book';
-import theme from '../../global/theme';
 import { RootState } from '../../store/store';
 
 export function Home() {
+
+  const { colors } = useTheme();
   const dispatch = useDispatch();
 
   const { books, page, totalPages, loading, filter: { category, year, search } } = useSelector((state: RootState) => state.books);
@@ -37,7 +39,7 @@ export function Home() {
 
   const renderFooter = useCallback(() => {
     return loading ? (
-      <ActivityIndicator size="large" color={theme.colors.primary} />
+      <ActivityIndicator size="large" color={colors.primary} />
     ) : null;
   }, [loading]);
 
