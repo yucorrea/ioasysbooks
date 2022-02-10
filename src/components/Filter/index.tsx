@@ -3,11 +3,10 @@ import { useTheme } from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
-import theme from '../../global/theme';
 
 import { Modal } from '../Modal';
 
-import { years, categories } from '../../mock';
+import { years, categories } from '../../../__mocks__';
 
 import {
   Container,
