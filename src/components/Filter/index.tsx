@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { setFilters } from '../../store/books/actions';
-import theme from '../../global/theme';
+import theme from '../../config/theme';
 
 import { Modal } from '../Modal';
 

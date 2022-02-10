@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import theme from '../../global/theme';
+import theme from '../../config/theme';
 
 import { Container } from './styles';
 

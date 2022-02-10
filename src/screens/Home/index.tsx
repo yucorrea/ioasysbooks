@@ -9,7 +9,7 @@ import { logout } from '../../store/auth/actions';
 import { allBooks } from '../../store/books/actions';
 import { ActivityIndicator, FlatList } from 'react-native';
 import { Book } from '../../components/Book';
-import theme from '../../global/theme';
+import theme from '../../config/theme';
 
 export function Home() {
   const dispatch = useDispatch();
