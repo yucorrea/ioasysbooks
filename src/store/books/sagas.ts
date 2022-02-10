@@ -1,5 +1,5 @@
 import { call, takeLatest, all, put, select } from 'redux-saga/effects';
-import api from '../../services/api';
+import api from '../../config/api';
 
 import { allBooksSuccess, allBooksFailure } from './actions';
 import { ALL_BOOKS_REQUESTED, SET_FILTER_REQUESTED } from './types';

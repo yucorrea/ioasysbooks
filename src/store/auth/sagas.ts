@@ -1,6 +1,6 @@
 import { Alert } from 'react-native';
 import { call, takeLatest, all, put } from 'redux-saga/effects';
-import api from '../../services/api';
+import api from '../../config/api';
 
 import { signInFailure, signInSuccess } from './actions';
 import { AUTH_LOGIN_REQUESTED } from './types';

@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
+import { useTheme } from 'styled-components/native';
+
 import { Container, Header, Wrapper, Logo, Title } from './styles';
 
 import logo from './../../assets/LogoDark.png';
@@ -9,9 +11,10 @@ import { logout } from '../../store/auth/actions';
 import { allBooks } from '../../store/books/actions';
 import { ActivityIndicator, FlatList } from 'react-native';
 import { Book } from '../../components/Book';
-import theme from '../../global/theme';
 
 export function Home() {
+
+  const { colors } = useTheme();
   const dispatch = useDispatch();
 
   const { books, page, totalPages, isLoading } = useSelector(
@@ -34,7 +37,7 @@ export function Home() {
 
   const renderFooter = useCallback(() => {
     return isLoading ? (
-      <ActivityIndicator size="large" color={theme.colors.primary} />
+      <ActivityIndicator size="large" color={colors.primary} />
     ) : null;
   }, [isLoading]);
 
