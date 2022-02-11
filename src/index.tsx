@@ -1,3 +1,4 @@
+import('./config/reactotron-config');
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { PersistGate } from 'redux-persist/integration/react';

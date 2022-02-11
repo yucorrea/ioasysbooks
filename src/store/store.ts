@@ -1,13 +1,16 @@
-import { createStore, applyMiddleware } from '@reduxjs/toolkit';
+import { createStore, applyMiddleware, compose } from '@reduxjs/toolkit';
+import Reactotron from './../config/reactotron-config'
+
 import createSagaMiddleware from 'redux-saga';
 import { persistStore } from 'redux-persist';
 
 import sagas from './sagas';
 import reducers from './slices';
 
-const sagaMiddleware = createSagaMiddleware();
+const sagaMonitor = Reactotron.createSagaMonitor!();
+const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
-const Store = createStore(reducers, applyMiddleware(sagaMiddleware))
+const Store = createStore(reducers, compose(applyMiddleware(sagaMiddleware), Reactotron.createEnhancer!()))
 
 const Persistor = persistStore(Store);
 sagaMiddleware.run(sagas);
