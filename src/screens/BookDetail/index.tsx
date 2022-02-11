@@ -1,34 +1,20 @@
 import React from 'react';
 import { useNavigation, useRoute } from '@react-navigation/core';
-import { ScrollView } from 'react-native';
+import type { RouteProp } from '@react-navigation/native';
 import styled from 'styled-components/native';
+
+import { AppStackParamList } from '../../routes/AppStack';
 
 import mark from '../../assets/mark.png';
 import { IconButton } from '../../components/IconButton';
 
-interface Book {
-  imageUrl: string;
-  title: string;
-  pageCount: number;
-  publisher: string;
-  published: number;
-  isbn10: string;
-  isbn13: string;
-  category: string;
-  authors: Array<string>;
-  language: string;
-  description: string;
-}
-
-interface BookParams {
- book: Book;
-}
+type BookDetailRouteProp = RouteProp<AppStackParamList, 'BookDetail'>;
 
 export function BookDetail() {
   const { goBack } = useNavigation();
-  const route = useRoute();
+  const route = useRoute<BookDetailRouteProp>();
 
-  const { book } = route.params as BookParams;
+  const { book } = route.params;
   return (
     <StyledContainer>
       <StyledScreen>

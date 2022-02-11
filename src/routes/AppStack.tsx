@@ -4,7 +4,25 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Home } from '../screens/Home';
 import { BookDetail } from '../screens/BookDetail';
 
-const { Navigator, Screen } = createNativeStackNavigator();
+interface Book {
+  imageUrl: string;
+  title: string;
+  pageCount: number;
+  publisher: string;
+  published: number;
+  isbn10: string;
+  isbn13: string;
+  category: string;
+  authors: Array<string>;
+  language: string;
+  description: string;
+}
+
+export type AppStackParamList = {
+  Home: undefined;
+  BookDetail: { book: Book };
+};
+const { Navigator, Screen } = createNativeStackNavigator<AppStackParamList>();
 
 export function AppStack() {
   return (

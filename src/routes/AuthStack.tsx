@@ -3,7 +3,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SignIn } from '../screens/SignIn';
 
-const { Navigator, Screen } = createNativeStackNavigator();
+export type AuthStackParamList = {
+  SignIn: undefined;
+};
+
+const { Navigator, Screen } = createNativeStackNavigator<AuthStackParamList>();
 
 export function AuthStack() {
   return (
