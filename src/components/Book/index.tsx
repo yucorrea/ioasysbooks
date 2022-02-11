@@ -1,14 +1,16 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/core';
 import styled from 'styled-components/native';
 import { TouchableOpacityProps } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+
+import { BookDetailNavigationProp } from '../../routes/AppStack';
 
 interface Props extends TouchableOpacityProps {
   data: any;
 }
 
 export function Book({ data, ...rest }: Props) {
-  const { navigate } = useNavigation();
+  const { navigate } = useNavigation<BookDetailNavigationProp>();
 
   return (
     <StyledContainer {...rest} onPress={() => navigate('BookDetail', { book: data })}>

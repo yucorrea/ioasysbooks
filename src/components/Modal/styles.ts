@@ -8,9 +8,6 @@ export const ModalContainer = styled(Animated.View)`
   height: ${height}px;
   padding: 16px;
 
-  position: absolute;
-  z-index: 2;
-
   justify-content: center;
   align-items: center;
 
