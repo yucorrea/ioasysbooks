@@ -11,7 +11,6 @@ interface INITIAL_STATE {
     search?: string;
     year?: string;
     category?: string;
-    loadMore: false
   }
 }
 
@@ -26,7 +25,6 @@ const initialState: INITIAL_STATE = {
     category: undefined,
     year: undefined,
     search: '',
-    loadMore: false
   }
 };
 
@@ -49,9 +47,9 @@ const booksSlice = createSlice({
     },
     GET_BOOKS_SUCCESS: (state, { payload }: PayloadAction<any>) => {
       state.loading = false;
-      state.books = state.page === 1 ? payload.books : [...state.books, ...payload.books];
-      state.totalPages = payload.totalPages;
       state.page = payload.page;
+      state.totalPages = payload.totalPages;
+      state.books = state.page === 1 ? payload.books : [...state.books, ...payload.books];
     },
     GET_BOOKS_FAILURE: (state, { payload }: PayloadAction<any>) => {
       state.loading = false;
