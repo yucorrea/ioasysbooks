@@ -49,7 +49,7 @@ export function SignIn() {
   );
 }
 
-export const StyledContainer = styled.ImageBackground.attrs({
+const StyledContainer = styled.ImageBackground.attrs({
   source: background,
 })`
   justify-content: center;
@@ -58,21 +58,21 @@ export const StyledContainer = styled.ImageBackground.attrs({
   padding: 16px;
 `;
 
-export const StyledWrapper = styled.View`
+const StyledWrapper = styled.View`
   flex-direction: row;
   align-items: center;
   margin-bottom: 48px;
 `;
 
-export const StyledLogo = styled.Image``;
+const StyledLogo = styled.Image``;
 
-export const StyledTitle = styled.Text`
+const StyledTitle = styled.Text`
   margin-left: 16px;
   font-size: 28px;
   font-family: ${({ theme }) => theme.fonts.light};
   color: ${({ theme }) => theme.colors.background};
 `;
 
-export const StyledForm = styled.View`
+const StyledForm = styled.View`
   height: 224px;
 `;

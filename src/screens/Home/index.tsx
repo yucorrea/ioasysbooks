@@ -76,35 +76,35 @@ export function Home() {
   );
 }
 
-export const StyledContainer = styled.SafeAreaView`
+const StyledContainer = styled.SafeAreaView`
   flex: 1;
   background: ${({ theme }) => theme.colors.background};
 `;
 
-export const StyledHeaderContainer = styled.View`
+const StyledHeaderContainer = styled.View`
   margin-top: 40px;
   padding: 0px 16px;
 `;
 
-export const StyledHeader = styled.View`
+const StyledHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 `;
 
-export const StyledLogoContainer = styled.View`
+const StyledLogoContainer = styled.View`
   flex-direction: row;
   align-items: center;
 `;
 
-export const StyledLogo = styled.Image``;
+const StyledLogo = styled.Image``;
 
-export const StyledTitle = styled.Text`
+const StyledTitle = styled.Text`
   margin-left: 16px;
   font-size: 28px;
   font-family: ${({ theme }) => theme.fonts.light};
   color: ${({ theme }) => theme.colors.title};
 `;
 
-export const StyledLogoutButton = styled.TouchableOpacity``;
+const StyledLogoutButton = styled.TouchableOpacity``;

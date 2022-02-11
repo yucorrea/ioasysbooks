@@ -97,11 +97,11 @@ export function BookDetail() {
   );
 }
 
-export const StyledContainer = styled.SafeAreaView`
+const StyledContainer = styled.SafeAreaView`
   flex: 1;
   background: ${({ theme }) => theme.colors.background};
 `;
-export const StyledScreen = styled.ScrollView.attrs({
+const StyledScreen = styled.ScrollView.attrs({
   showsVerticalScrollIndicator:false,
   contentContainerStyle: {
     paddingHorizontal: 16,
@@ -109,37 +109,37 @@ export const StyledScreen = styled.ScrollView.attrs({
   }
 })``;
 
-export const StyledBook = styled.Image`
+const StyledBook = styled.Image`
   height: 351px;
   margin-top: 12px;
   margin-bottom: 24px; ;
 `;
 
-export const StyledWrapper = styled.View`
+const StyledWrapper = styled.View`
   padding: 12px 40px 40px 40px;
 `;
 
-export const StyledTitle = styled.Text`
+const StyledTitle = styled.Text`
   font-size: 28px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.title};
 `;
 
-export const StyledAuthorsContainer = styled.View`
+const StyledAuthorsContainer = styled.View`
   flex-direction: row;
 `;
 
-export const StyledAuthor = styled.Text`
+const StyledAuthor = styled.Text`
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.primary_light};
 `;
 
-export const StyledInformationContainer = styled.View`
+const StyledInformationContainer = styled.View`
   margin-top: 32px;
 `;
 
-export const StyledInformationTitle = styled.Text`
+const StyledInformationTitle = styled.Text`
   margin-bottom: 14px;
   font-size: 16px;
   text-transform: uppercase;
@@ -147,7 +147,7 @@ export const StyledInformationTitle = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 `;
 
-export const StyledDetail = styled.View`
+const StyledDetail = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -155,29 +155,29 @@ export const StyledDetail = styled.View`
   margin: 4px 0px;
 `;
 
-export const StyledLeft = styled.Text`
+const StyledLeft = styled.Text`
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.title};
 `;
 
-export const StyledRight = styled.Text`
+const StyledRight = styled.Text`
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.text};
 `;
 
-export const StyledReviewContainer = styled.View`
+const StyledReviewContainer = styled.View`
   width: 100%;
   margin-top: 16px;
 `;
 
-export const StyledAbsoluteWrapper = styled.View`
+const StyledAbsoluteWrapper = styled.View`
   width: 95%;
   flex-direction: row;
 `;
 
-export const StyledDescription = styled.Text`
+const StyledDescription = styled.Text`
   align-items: baseline;
   text-align: justify;
   font-size: 14px;
@@ -185,6 +185,6 @@ export const StyledDescription = styled.Text`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-export const StyledMark = styled.Image`
+const StyledMark = styled.Image`
   margin-bottom: 4px;
 `;
