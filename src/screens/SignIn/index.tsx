@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { Container, Wrapper, Logo, Title, Form } from './styles';
 
-import logo from './../../assets/Logo.png';
+import logo from './../../assets/images/Logo.png';
 
 import { Input } from '../../components/Input';
 import { LOGIN } from '../../store/slices/userSlice';

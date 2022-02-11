@@ -4,7 +4,7 @@ import { useTheme } from 'styled-components/native';
 
 import { Container, Header, Wrapper, Logo, Title } from './styles';
 
-import logo from './../../assets/LogoDark.png';
+import logo from './../../assets/images/LogoDark.png';
 import { Filter } from '../../components/Filter';
 import { IconButton } from '../../components/IconButton';
 import { useDispatch, useSelector } from 'react-redux';

@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import React from 'react';
 import { IconButton } from '../../components/IconButton';
 
-import mark from '../../assets/mark.png';
+import mark from '../../assets/images/mark.png';
 
 import {
   Container,
