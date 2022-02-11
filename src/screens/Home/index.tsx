@@ -3,7 +3,7 @@ import { ActivityIndicator, FlatList } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import styled, { useTheme } from 'styled-components/native';
 
-import logo from './../../assets/LogoDark.png';
+import logo from './../../assets/images/LogoDark.png';
 import { Filter } from '../../components/Filter';
 import { IconButton } from '../../components/IconButton';
 import { Book } from '../../components/Book';

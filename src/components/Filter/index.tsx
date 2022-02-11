@@ -6,7 +6,7 @@ import { GET_BOOKS } from '../../store/slices/booksSlice';
 
 import { ModalComponent } from '../Modal';
 
-import { years, categories } from '../../mock';
+import { years, categories } from './../../../__mocks__';
 
 import {
   Container,

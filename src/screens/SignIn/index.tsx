@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components/native';
 
-import background from '../../assets/background.png';
-import logo from './../../assets/Logo.png';
+import background from './../../assets/images/background.png';
+import logo from './../../assets/images/Logo.png';
 
 import { Input } from '../../components/Input';
 import { LOGIN } from '../../store/slices/userSlice';

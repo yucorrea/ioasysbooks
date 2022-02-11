@@ -5,8 +5,8 @@ import styled from 'styled-components/native';
 
 import { AppStackParamList } from '../../routes/AppStack';
 
-import mark from '../../assets/mark.png';
 import { IconButton } from '../../components/IconButton';
+import mark from '../../assets/images/mark.png';
 
 type BookDetailRouteProp = RouteProp<AppStackParamList, 'BookDetail'>;
 
