@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import styled from 'styled-components/native';
 
-import { Container, Wrapper, Logo, Title, Form } from './styles';
-
-import logo from './../../assets/Logo.png';
+import background from './../../assets/images/background.png';
+import logo from './../../assets/images/Logo.png';
 
 import { Input } from '../../components/Input';
 import { LOGIN } from '../../store/slices/userSlice';
@@ -19,12 +19,12 @@ export function SignIn() {
   }, [email, password, dispatch]);
 
   return (
-    <Container>
-      <Form>
-        <Wrapper>
-          <Logo source={logo} />
-          <Title>Books</Title>
-        </Wrapper>
+    <StyledContainer>
+      <StyledForm>
+        <StyledWrapper>
+          <StyledLogo source={logo} />
+          <StyledTitle>Books</StyledTitle>
+        </StyledWrapper>
 
         <Input
           label="Email"
@@ -44,7 +44,35 @@ export function SignIn() {
           onChangeText={e => setPassword(e)}
           onPress={handleLogin}
         />
-      </Form>
-    </Container>
+      </StyledForm>
+    </StyledContainer>
   );
 }
+
+const StyledContainer = styled.ImageBackground.attrs({
+  source: background,
+})`
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+`;
+
+const StyledWrapper = styled.View`
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 48px;
+`;
+
+const StyledLogo = styled.Image``;
+
+const StyledTitle = styled.Text`
+  margin-left: 16px;
+  font-size: 28px;
+  font-family: ${({ theme }) => theme.fonts.light};
+  color: ${({ theme }) => theme.colors.background};
+`;
+
+const StyledForm = styled.View`
+  height: 224px;
+`;

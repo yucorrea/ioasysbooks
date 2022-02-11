@@ -3,11 +3,10 @@ import { useTheme } from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
-import theme from '../../global/theme';
 
-import { Modal } from '../Modal';
+import { ModalComponent } from '../Modal';
 
-import { years, categories } from '../../mock';
+import { years, categories } from './../../../__mocks__';
 
 import {
   Container,
@@ -64,49 +63,47 @@ export function Filter() {
         </OptionButton>
       </Container>
 
-      {modal ? (
-        <Modal show={modal} close={() => setModal(false)}>
-          <Title>Selecione a categoria</Title>
-          <OptionsFilter>
-            {categories.map(option => (
-              <FilterButton
-                key={option.id.toString()}
-                selected={option.value === selectedCategory}
-                onPress={() =>
-                  selectedCategory
-                    ? setSelectedCategory('')
-                    : setSelectedCategory(option.value)
-                }
-              >
-                <FilterButtonText selected={option.value === selectedCategory}>
-                  {option.value}
-                </FilterButtonText>
-              </FilterButton>
-            ))}
-          </OptionsFilter>
+      <ModalComponent show={modal} close={() => setModal(false)}>
+        <Title>Selecione a categoria</Title>
+        <OptionsFilter>
+          {categories.map(option => (
+            <FilterButton
+              key={option.id.toString()}
+              selected={option.value === selectedCategory}
+              onPress={() =>
+                selectedCategory
+                  ? setSelectedCategory('')
+                  : setSelectedCategory(option.value)
+              }
+            >
+              <FilterButtonText selected={option.value === selectedCategory}>
+                {option.value}
+              </FilterButtonText>
+            </FilterButton>
+          ))}
+        </OptionsFilter>
 
-          <Title>Selecione o ano</Title>
-          <OptionsFilter>
-            {years.map(option => (
-              <FilterButton
-                key={option.id.toString()}
-                selected={option.value === selectedYear}
-                onPress={() =>
-                  selectedYear
-                    ? setSelectedYear('')
-                    : setSelectedYear(option.value)
-                }
-              >
-                <FilterButtonText selected={option.value === selectedYear}>
-                  {option.value}
-                </FilterButtonText>
-              </FilterButton>
-            ))}
-          </OptionsFilter>
+        <Title>Selecione o ano</Title>
+        <OptionsFilter>
+          {years.map(option => (
+            <FilterButton
+              key={option.id.toString()}
+              selected={option.value === selectedYear}
+              onPress={() =>
+                selectedYear
+                  ? setSelectedYear('')
+                  : setSelectedYear(option.value)
+              }
+            >
+              <FilterButtonText selected={option.value === selectedYear}>
+                {option.value}
+              </FilterButtonText>
+            </FilterButton>
+          ))}
+        </OptionsFilter>
 
-          <ButtonFilter onPress={handleApplyFilters} title="Filtar" />
-        </Modal>
-      ) : null}
+        <ButtonFilter onPress={handleApplyFilters} title="Filtar" />
+      </ModalComponent>
     </>
   );
 }
