@@ -23,7 +23,7 @@ export function Input({ label, enableButton, onPress, ...rest }: Props) {
 }
 
 
-export const StyledContainer = styled.View`
+const StyledContainer = styled.View`
   flex-direction: row;
   align-items: center;
   width: 100%;
@@ -33,18 +33,18 @@ export const StyledContainer = styled.View`
   background: rgba(0, 0, 0, 0.32);
 `;
 
-export const StyledWrapper = styled.View`
+const StyledWrapper = styled.View`
   flex: 1;
 `;
 
-export const StyledLabel = styled.Text`
+const StyledLabel = styled.Text`
   width: 100%;
   color: ${({ theme }) => theme.colors.text_light};
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const StyledTextInput = styled.TextInput`
+const StyledTextInput = styled.TextInput`
   width: 100%;
   margin-top: 4px;
   color: ${({ theme }) => theme.colors.background};
@@ -52,6 +52,6 @@ export const StyledTextInput = styled.TextInput`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const StyledButtonInput = styled(Button)`
+const StyledButtonInput = styled(Button)`
   width: 85px;
 `;

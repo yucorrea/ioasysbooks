@@ -14,7 +14,7 @@ export function Button({ title, ...rest }: Props) {
   );
 }
 
-export const StyledContainer = styled.TouchableOpacity`
+const StyledContainer = styled.TouchableOpacity`
   width: 85px;
   height: 36px;
   background: ${({ theme }) => theme.colors.background};
@@ -24,7 +24,7 @@ export const StyledContainer = styled.TouchableOpacity`
   align-items: center;
 `;
 
-export const StyledButtonText = styled.Text`
+const StyledButtonText = styled.Text`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.medium};

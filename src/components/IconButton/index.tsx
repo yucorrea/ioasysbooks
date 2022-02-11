@@ -20,7 +20,7 @@ export function IconButton({ onPress, icon, ...rest }: Props) {
   );
 }
 
-export const StyledContainer = styled.TouchableOpacity`
+const StyledContainer = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   width: 32px;

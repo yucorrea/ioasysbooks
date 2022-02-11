@@ -27,7 +27,7 @@ export function Book({ data, ...rest }: Props) {
   );
 }
 
-export const StyledContainer = styled.TouchableOpacity`
+const StyledContainer = styled.TouchableOpacity`
   flex-direction: row;
   width: 100%;
   height: 160px;
@@ -37,31 +37,31 @@ export const StyledContainer = styled.TouchableOpacity`
   background: ${({ theme }) => theme.colors.background};
 `;
 
-export const StyledImage = styled.Image`
+const StyledImage = styled.Image`
   width: 81px;
   height: 112px;
   margin-right: 16px;
 `;
 
-export const StyledWrapper = styled.View``;
+const StyledWrapper = styled.View``;
 
-export const StyledTitle = styled.Text`
+const StyledTitle = styled.Text`
   color: ${({ theme }) => theme.colors.title};
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.medium};
 `;
 
-export const StyledSubTitle = styled.Text`
+const StyledSubTitle = styled.Text`
   color: ${({ theme }) => theme.colors.primary_light};
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const StyledFooter = styled.View`
+const StyledFooter = styled.View`
   margin-top: 25px;
 `;
 
-export const StyledDetail = styled.Text`
+const StyledDetail = styled.Text`
   color: ${({ theme }) => theme.colors.text};
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
