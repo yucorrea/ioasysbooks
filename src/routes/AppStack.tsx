@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { Home } from '../screens/Home';
 import { BookDetail } from '../screens/BookDetail';
@@ -22,6 +22,17 @@ export type AppStackParamList = {
   Home: undefined;
   BookDetail: { book: Book };
 };
+
+export type HomeNavigationProp = NativeStackNavigationProp<
+  AppStackParamList,
+  'Home'
+>;
+
+export type BookDetailNavigationProp = NativeStackNavigationProp<
+  AppStackParamList,
+  'BookDetail'
+>;
+
 const { Navigator, Screen } = createNativeStackNavigator<AppStackParamList>();
 
 export function AppStack() {
