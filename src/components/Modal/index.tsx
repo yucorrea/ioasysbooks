@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Animated, Modal } from 'react-native';
+import React from 'react';
+import { Modal, Dimensions } from 'react-native';
+import styled from 'styled-components/native';
+
+const { width, height } = Dimensions.get('window');
+
 import { IconButton } from '../IconButton';
-
-import { ModalContainer, ModalContent, Header } from './styles';
-
 interface Props {
   show: boolean;
   close: () => void;
@@ -14,14 +15,35 @@ export function ModalComponent({ show, close, children }: Props) {
 
   return (
     <Modal visible={show} onRequestClose={close} animationType="fade" transparent>
-      <ModalContainer>
-        <ModalContent>
-          <Header>
+      <StyledModalContainer>
+        <StyledModalContent>
+          <StyledHeader>
             <IconButton onPress={close} icon="close-outline" />
-          </Header>
+          </StyledHeader>
           {children}
-        </ModalContent>
-      </ModalContainer>
+        </StyledModalContent>
+      </StyledModalContainer>
     </Modal>
   );
 }
+
+export const StyledModalContainer = styled.View`
+  justify-content: center;
+  align-items: center;
+  width: ${width}px;
+  height: ${height}px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
+export const StyledModalContent = styled.View`
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  background: ${({ theme }) => theme.colors.background};
+`;
+
+export const StyledHeader = styled.View`
+  align-items: flex-end;
+  width: 100%;
+`;
