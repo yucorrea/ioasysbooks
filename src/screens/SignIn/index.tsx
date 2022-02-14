@@ -47,7 +47,7 @@ export function SignIn() {
             <Input
               label="Email"
               value={value}
-              // error={erros?.email?.message}
+              // error={errors?.email?.message}
               onChangeText={onChange}
               placeholder="Seu e-mail"
               autoCapitalize="none"
@@ -64,7 +64,7 @@ export function SignIn() {
             <Input
               label="Senha"
               value={value}
-               // error={erros?.password?.message}
+               // error={errors?.password?.message}
               onChangeText={onChange}
               onPress={handleSubmit(handleLogin)}
               placeholder="********"
