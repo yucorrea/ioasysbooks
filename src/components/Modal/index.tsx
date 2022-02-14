@@ -33,14 +33,14 @@ export const StyledModalContainer = styled.View`
   width: ${width}px;
   height: ${height}px;
   padding: 16px;
-  background: rgba(0, 0, 0, 0.5);
+  background: ${({ theme }) => theme.colors.modal_overlay};
 `;
 
 export const StyledModalContent = styled.View`
   width: 100%;
   padding: 16px;
   border-radius: 4px;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.shape};
 `;
 
 export const StyledHeader = styled.View`

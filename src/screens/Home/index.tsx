@@ -71,6 +71,7 @@ export function Home() {
         onEndReached={loadMore}
         onEndReachedThreshold={0.1}
         ListFooterComponent={renderFooter}
+        contentContainerStyle={{ paddingHorizontal: 16 }}
       />
     </StyledContainer>
   );
@@ -107,4 +108,3 @@ const StyledTitle = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 `;
 
-const StyledLogoutButton = styled.TouchableOpacity``;

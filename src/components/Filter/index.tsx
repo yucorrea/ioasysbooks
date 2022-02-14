@@ -92,10 +92,10 @@ interface FilterButtonProps {
 }
 
 const StyledContainer = styled.View`
-  width: 100%;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   margin: 32px 0px;
 `;
 
@@ -107,13 +107,13 @@ const StyledInputContainer = styled.View`
   margin-right: 22px;
   border-radius: 2px;
   height: 48px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 const StyledInput = styled.TextInput`
   flex: 1;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: rgba(153, 153, 153, 0.7);
+  color: transparent;
   height: 48px;
   font-size: 12px;
   margin-left: 11px;
@@ -131,36 +131,36 @@ const StyledButtonFilter = styled(Button)`
 `;
 
 const StyledOptionsFilter = styled.View`
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 8px;
+  width: 100%;
   margin-bottom: 36px;
+  margin-top: 8px;
 `;
 
 const StyledFilterButton = styled.TouchableOpacity<FilterButtonProps>`
-  border: 1px solid
-    ${({ selected, theme }) =>
-      selected ? theme.colors.title : 'rgba(51, 51, 51, 0.3)'};
-
-  border-radius: 44px;
   justify-content: center;
   align-items: center;
+  border-radius: 44px;
+  border: 1px solid
+    ${({ selected, theme }) =>
+      selected ? theme.colors.title : theme.colors.border};
+
 
   ${({ selected, theme }) =>
     selected &&
     css`
-      background: ${theme.colors.title};
+      background: ${theme.colors.shape_dark};
     `}
 
   margin: 8px 8px 8px 0px;
 `;
 
 const StyledFilterButtonText = styled.Text<FilterButtonProps>`
-  font-family: ${({ theme }) => theme.fonts.regular};
-  font-size: 12px;
   padding: 6px 16px;
+  font-size: 12px;
+  font-family: ${({ theme }) => theme.fonts.regular};
 
   color: ${({ selected, theme }) =>
     selected ? theme.colors.background : theme.colors.title};

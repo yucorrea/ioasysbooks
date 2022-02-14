@@ -36,7 +36,7 @@ const StyledContainer = styled.TouchableOpacity`
   margin: 16px 0px;
   padding: 19px 16px;
   border-radius: 4px;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.shape};
 `;
 
 const StyledImage = styled.Image`

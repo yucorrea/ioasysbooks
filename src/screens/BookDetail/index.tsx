@@ -85,7 +85,7 @@ export function BookDetail() {
 
 const StyledContainer = styled.SafeAreaView`
   flex: 1;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.shape};
 `;
 const StyledScreen = styled.ScrollView.attrs({
   showsVerticalScrollIndicator:false,
