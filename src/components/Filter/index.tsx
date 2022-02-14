@@ -113,7 +113,7 @@ const StyledInputContainer = styled.View`
 const StyledInput = styled.TextInput`
   flex: 1;
   font-family: ${({ theme }) => theme.fonts.medium};
-  color: transparent;
+  color: ${({ theme }) => theme.colors.text};
   height: 48px;
   font-size: 12px;
   margin-left: 11px;
