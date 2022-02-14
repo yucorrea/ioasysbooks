@@ -70,7 +70,7 @@ const StyledTitle = styled.Text`
   margin-left: 16px;
   font-size: 28px;
   font-family: ${({ theme }) => theme.fonts.light};
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.shape};
 `;
 
 const StyledForm = styled.View`

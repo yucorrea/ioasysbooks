@@ -30,7 +30,7 @@ const StyledContainer = styled.View`
   margin-bottom: 16px;
   padding: 8px 16px 8px 13px;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.32);
+  background: ${({ theme }) => theme.colors.input_shape};
 `;
 
 const StyledWrapper = styled.View`
@@ -47,7 +47,7 @@ const StyledLabel = styled.Text`
 const StyledTextInput = styled.TextInput`
   width: 100%;
   margin-top: 4px;
-  color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.shape};
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;

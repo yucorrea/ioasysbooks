@@ -17,7 +17,7 @@ export function Button({ title, ...rest }: Props) {
 const StyledContainer = styled.TouchableOpacity`
   width: 85px;
   height: 36px;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.shape};
 
   border-radius: 44px;
   justify-content: center;

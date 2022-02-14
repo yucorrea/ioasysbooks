@@ -25,6 +25,6 @@ const StyledContainer = styled.TouchableOpacity`
   align-items: center;
   width: 32px;
   height: 32px;
-  border: 1px solid rgba(51, 51, 51, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 16px;
 `;
