@@ -1,6 +1,9 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components/native';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 import background from './../../assets/images/background.png';
 import logo from './../../assets/images/Logo.png';
@@ -8,15 +11,30 @@ import logo from './../../assets/images/Logo.png';
 import { Input } from '../../components/Input';
 import { LOGIN } from '../../store/slices/userSlice';
 
+const schema = yup.object({
+  email: yup.string().email('Formato de e-mail inválido')
+    .required('E-mail é obrigatório'),
+  password: yup.string().required('Senha é obrigatória')
+});
+
+type FormData = {
+  email: string;
+  password: string;
+}
+
 export function SignIn() {
   const dispatch = useDispatch();
+  const { control, handleSubmit, /* formState: { errors } */ } = useForm<FormData>({
+    resolver: yupResolver(schema),
+    defaultValues: {
+      email: '',
+      password: ''
+    }
+  });
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = useCallback(() => {
+  const handleLogin = useCallback(({email, password} : FormData) => {
     dispatch(LOGIN({email, password}));
-  }, [email, password, dispatch]);
+  }, [dispatch]);
 
   return (
     <StyledContainer>
@@ -26,23 +44,38 @@ export function SignIn() {
           <StyledTitle>Books</StyledTitle>
         </StyledWrapper>
 
-        <Input
-          label="Email"
-          placeholder="Seu e-mail"
-          autoCapitalize="none"
-          autoCorrect={false}
-          keyboardType="email-address"
-          value={email}
-          onChangeText={e => setEmail(e)}
+        <Controller
+          control={control}
+          name="email"
+          render={({field: {onChange, value}}) => (
+            <Input
+              label="Email"
+              value={value}
+              // error={errors?.email?.message}
+              onChangeText={onChange}
+              placeholder="Seu e-mail"
+              autoCapitalize="none"
+              autoCorrect={false}
+              keyboardType="email-address"
+            />
+          )}
         />
-        <Input
-          label="Senha"
-          secureTextEntry
-          placeholder="********"
-          enableButton
-          value={password}
-          onChangeText={e => setPassword(e)}
-          onPress={handleLogin}
+
+        <Controller
+          control={control}
+          name="password"
+          render={({field: {onChange, value}}) => (
+            <Input
+              label="Senha"
+              value={value}
+               // error={errors?.password?.message}
+              onChangeText={onChange}
+              onPress={handleSubmit(handleLogin)}
+              placeholder="********"
+              secureTextEntry
+              enableButton
+            />
+          )}
         />
       </StyledForm>
     </StyledContainer>
