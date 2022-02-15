@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Modal, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -11,7 +11,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export function ModalComponent({ show, close, children }: Props) {
+const ModalComponent = ({ show, close, children }: Props) => {
 
   return (
     <Modal visible={show} onRequestClose={close} animationType="fade" transparent>
@@ -27,7 +27,7 @@ export function ModalComponent({ show, close, children }: Props) {
   );
 }
 
-export const StyledModalContainer = styled.View`
+const StyledModalContainer = styled.View`
   justify-content: center;
   align-items: center;
   width: ${width}px;
@@ -36,14 +36,16 @@ export const StyledModalContainer = styled.View`
   background: ${({ theme }) => theme.colors.modal_overlay};
 `;
 
-export const StyledModalContent = styled.View`
+const StyledModalContent = styled.View`
   width: 100%;
   padding: 16px;
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.shape};
 `;
 
-export const StyledHeader = styled.View`
+const StyledHeader = styled.View`
   align-items: flex-end;
   width: 100%;
 `;
+
+export default memo(ModalComponent);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { GestureResponderEvent, TextInputProps } from 'react-native';
 import styled from 'styled-components/native';
 import { Button } from '../Button';
@@ -9,7 +9,7 @@ interface Props extends TextInputProps {
   onPress?: (event: GestureResponderEvent) => void;
 }
 
-export function Input({ label, enableButton, onPress, ...rest }: Props) {
+function InputComponent({ label, enableButton, onPress, ...rest }: Props) {
   return (
     <StyledContainer>
       <StyledWrapper>
@@ -55,3 +55,5 @@ const StyledTextInput = styled.TextInput`
 const StyledButtonInput = styled(Button)`
   width: 85px;
 `;
+
+export const Input = memo(InputComponent);

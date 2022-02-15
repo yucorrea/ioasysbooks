@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import styled, { useTheme } from 'styled-components/native';
 
@@ -9,7 +9,7 @@ interface Props extends TouchableOpacityProps {
   icon: string;
 }
 
-export function IconButton({ onPress, icon, ...rest }: Props) {
+function IconButtonComponent({ onPress, icon, ...rest }: Props) {
 
   const { colors } = useTheme();
 
@@ -28,3 +28,5 @@ const StyledContainer = styled.TouchableOpacity`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 16px;
 `;
+
+export const IconButton = memo(IconButtonComponent);

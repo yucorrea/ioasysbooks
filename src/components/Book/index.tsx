@@ -1,19 +1,16 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components/native';
 import { TouchableOpacityProps } from 'react-native';
-import { useNavigation } from '@react-navigation/core';
-
-import { BookDetailNavigationProp } from '../../routes/AppStack';
 
 interface Props extends TouchableOpacityProps {
   data: any;
+  onPress: () => void
 }
 
-export function Book({ data, ...rest }: Props) {
-  const { navigate } = useNavigation<BookDetailNavigationProp>();
+function BookComponent({ data, onPress, ...rest }: Props) {
 
   return (
-    <StyledContainer {...rest} onPress={() => navigate('BookDetail', { book: data })}>
+    <StyledContainer {...rest} onPress={onPress}>
       <StyledImage source={{ uri: data.imageUrl }} />
       <StyledWrapper>
         <StyledTitle>{data.title}</StyledTitle>
@@ -68,3 +65,7 @@ const StyledDetail = styled.Text`
   font-size: 12px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
+
+export const Book = memo(BookComponent, (prevState, nextState) => {
+  return Object.is(prevState.data, nextState.data);
+}) ;

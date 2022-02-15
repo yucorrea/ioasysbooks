@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -6,7 +6,7 @@ interface Props extends TouchableOpacityProps {
   title?: string;
 }
 
-export function Button({ title, ...rest }: Props) {
+function ButtonComponent({ title, ...rest }: Props) {
   return (
     <StyledContainer {...rest}>
       <StyledButtonText>{title}</StyledButtonText>
@@ -29,3 +29,5 @@ const StyledButtonText = styled.Text`
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.medium};
 `;
+
+export const Button = memo(ButtonComponent);

@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "devtools": "react-devtools"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
@@ -17,6 +18,7 @@
     "@reduxjs/toolkit": "^1.7.2",
     "axios": "^0.21.4",
     "react": "17.0.2",
+    "react-devtools": "^4.13.0",
     "react-hook-form": "^7.27.0",
     "react-native": "0.65.1",
     "react-native-safe-area-context": "^3.3.2",

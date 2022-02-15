@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import styled, { css } from 'styled-components/native';
 
 import { Button } from './../Button';
-import { ModalComponent } from '../Modal';
+import ModalComponent from '../Modal';
 
 import { years, categories } from './../../../__mocks__';
 
@@ -25,7 +25,6 @@ export function Filter() {
   }, [dispatch, search]);
 
   const handleApplyFilters = useCallback(() => {
-    console.log({ selectedCategory, selectedYear })
     setModal(false);
   }, [dispatch, selectedCategory, selectedYear]);
 
