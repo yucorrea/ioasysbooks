@@ -18,14 +18,18 @@ const schema = yup.object({
 });
 
 type FormData = {
-  email: '',
-  password: ''
+  email: string;
+  password: string;
 }
 
 export function SignIn() {
   const dispatch = useDispatch();
   const { control, handleSubmit, /* formState: { errors } */ } = useForm<FormData>({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schema),
+    defaultValues: {
+      email: '',
+      password: ''
+    }
   });
 
   const handleLogin = useCallback(({email, password} : FormData) => {
