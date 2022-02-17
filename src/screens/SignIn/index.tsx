@@ -1,9 +1,11 @@
 import React, { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components/native';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+
+import { RootState } from '../../store/store';
 
 import background from './../../assets/images/background.png';
 import logo from './../../assets/images/Logo.png';
@@ -23,6 +25,8 @@ type FormData = {
 }
 
 export function SignIn() {
+  const { loading } = useSelector(( state : RootState) => state.user);
+
   const dispatch = useDispatch();
   const { control, handleSubmit, /* formState: { errors } */ } = useForm<FormData>({
     resolver: yupResolver(schema),
@@ -74,6 +78,7 @@ export function SignIn() {
               placeholder="********"
               secureTextEntry
               enableButton
+              loading={loading}
             />
           )}
         />
