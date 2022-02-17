@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { GestureResponderEvent, TextInputProps } from 'react-native';
 import styled from 'styled-components/native';
-import { Button } from '../Button';
+import Button from '../Button';
 
 interface Props extends TextInputProps {
   label: string;
@@ -10,7 +10,13 @@ interface Props extends TextInputProps {
   onPress?: (event: GestureResponderEvent) => void;
 }
 
-function InputComponent({ label, enableButton, loading = false,  onPress, ...rest }: Props) {
+const Input: React.FC<Props> = ({
+  label,
+  enableButton,
+  loading = false,
+  onPress,
+  ...rest
+}) => {
   return (
     <StyledContainer>
       <StyledWrapper>
@@ -18,11 +24,12 @@ function InputComponent({ label, enableButton, loading = false,  onPress, ...res
         <StyledTextInput underlineColorAndroid="transparent" {...rest} />
       </StyledWrapper>
 
-      {enableButton && <StyledButtonInput loading={loading} title="Entrar" onPress={onPress} />}
+      {enableButton && (
+        <StyledButtonInput loading={loading} title="Entrar" onPress={onPress} />
+      )}
     </StyledContainer>
   );
-}
-
+};
 
 const StyledContainer = styled.View`
   flex-direction: row;
@@ -57,4 +64,4 @@ const StyledButtonInput = styled(Button)`
   flex: 1;
 `;
 
-export const Input = memo(InputComponent);
+export default memo(Input);

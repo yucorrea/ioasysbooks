@@ -1,8 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { Home } from '../screens/Home';
-import { BookDetail } from '../screens/BookDetail';
+import Home  from '../screens/Home';
+import BookDetail  from '../screens/BookDetail';
 
 export interface Book {
   id: string;
@@ -36,7 +36,7 @@ export type BookDetailNavigationProp = NativeStackNavigationProp<
 
 const { Navigator, Screen } = createNativeStackNavigator<AppStackParamList>();
 
-export function AppStack() {
+const AppStack = () => {
   return (
     <Navigator>
       <Screen name="Home" component={Home} options={{ headerShown: false }} />
@@ -48,3 +48,5 @@ export function AppStack() {
     </Navigator>
   );
 }
+
+export default AppStack;

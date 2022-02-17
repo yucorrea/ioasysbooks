@@ -8,7 +8,7 @@ interface Props extends TouchableOpacityProps {
   onPress: () => void
 }
 
-function BookComponent({ data, onPress, ...rest }: Props) {
+const Book : React.FC<Props> = ({ data, onPress, ...rest })  => {
 
   return (
     <StyledContainer {...rest} onPress={onPress}>
@@ -67,6 +67,6 @@ const StyledDetail = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-export const Book = memo(BookComponent, (prevState, nextState) => {
+export default memo(Book, (prevState, nextState) => {
   return Object.is(prevState.data, nextState.data);
 }) ;

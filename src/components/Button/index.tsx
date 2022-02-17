@@ -12,7 +12,7 @@ interface Props extends TouchableOpacityProps {
   loading?: boolean;
 }
 
-function ButtonComponent({ title, loading = false, ...rest }: Props) {
+const Button : React.FC<Props>  = ({ title, loading = false, ...rest })  => {
   const { colors } = useTheme();
 
   const width = useSharedValue(86);
@@ -66,4 +66,4 @@ const StyledButtonText = styled(Animated.Text)`
   font-family: ${({ theme }) => theme.fonts.medium};
 `;
 
-export const Button = memo(ButtonComponent);
+export default memo(Button);

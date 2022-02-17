@@ -4,14 +4,14 @@ import styled from 'styled-components/native';
 
 const { width, height } = Dimensions.get('window');
 
-import { IconButton } from '../IconButton';
+import  IconButton  from '../IconButton';
 interface Props {
   show: boolean;
   close: () => void;
   children: React.ReactNode;
 }
 
-const ModalComponent = ({ show, close, children }: Props) => {
+const ModalComponent : React.FC<Props> =  ({ show, close, children }) => {
 
   return (
     <Modal visible={show} onRequestClose={close} animationType="fade" transparent>

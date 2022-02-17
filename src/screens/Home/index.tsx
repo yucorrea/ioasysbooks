@@ -6,16 +6,16 @@ import { useNavigation } from '@react-navigation/core';
 
 import { Book as BookData, BookDetailNavigationProp } from '../../routes/AppStack';
 import logo from './../../assets/images/LogoDark.png';
-import { Filter } from '../../components/Filter';
-import { IconButton } from '../../components/IconButton';
-import { Book } from '../../components/Book';
+import  Filter  from '../../components/Filter';
+import  IconButton  from '../../components/IconButton';
+import  Book  from '../../components/Book';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
 import { LOGOUT } from '../../store/slices/userSlice';
 
 import { RootState } from '../../store/store';
 
-export function Home() {
+ const Home = () => {
   const { navigate } = useNavigation<BookDetailNavigationProp>();
   const { colors } = useTheme();
   const dispatch = useDispatch();
@@ -114,3 +114,4 @@ const StyledTitle = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 `;
 
+export default Home;

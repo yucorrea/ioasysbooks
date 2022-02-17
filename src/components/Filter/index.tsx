@@ -4,14 +4,14 @@ import { useTheme } from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styled, { css } from 'styled-components/native';
 
-import { Button } from './../Button';
+import  Button  from './../Button';
 import ModalComponent from '../Modal';
 
 import { years, categories } from './../../../__mocks__';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
 
-export function Filter() {
+ const Filter = () =>  {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
@@ -170,3 +170,5 @@ const StyledTitle = styled.Text`
   font-family: ${({ theme }) => theme.fonts.medium};
   color: ${({ theme }) => theme.colors.title};
 `;
+
+export default Filter;

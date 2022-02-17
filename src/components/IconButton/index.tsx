@@ -9,7 +9,7 @@ interface Props extends TouchableOpacityProps {
   icon: string;
 }
 
-function IconButtonComponent({ onPress, icon, ...rest }: Props) {
+const IconButton : React.FC<Props> = ({ onPress, icon, ...rest }) => {
 
   const { colors } = useTheme();
 
@@ -29,4 +29,4 @@ const StyledContainer = styled.TouchableOpacity`
   border-radius: 16px;
 `;
 
-export const IconButton = memo(IconButtonComponent);
+export default memo(IconButton);
