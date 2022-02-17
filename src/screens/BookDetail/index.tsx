@@ -5,12 +5,12 @@ import styled from 'styled-components/native';
 
 import { AppStackParamList } from '../../routes/AppStack';
 
-import { IconButton } from '../../components/IconButton';
+import  IconButton  from '../../components/IconButton';
 import mark from '../../assets/images/mark.png';
 
 type BookDetailRouteProp = RouteProp<AppStackParamList, 'BookDetail'>;
 
-export function BookDetail() {
+const BookDetail = () => {
   const { goBack } = useNavigation();
   const route = useRoute<BookDetailRouteProp>();
 
@@ -174,3 +174,5 @@ const StyledDescription = styled.Text`
 const StyledMark = styled.Image`
   margin-bottom: 4px;
 `;
+
+export default BookDetail;

@@ -1,10 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import { Home } from '../screens/Home';
-import { BookDetail } from '../screens/BookDetail';
+import Home  from '../screens/Home';
+import BookDetail  from '../screens/BookDetail';
 
-interface Book {
+export interface Book {
+  id: string;
   imageUrl: string;
   title: string;
   pageCount: number;
@@ -35,7 +36,7 @@ export type BookDetailNavigationProp = NativeStackNavigationProp<
 
 const { Navigator, Screen } = createNativeStackNavigator<AppStackParamList>();
 
-export function AppStack() {
+const AppStack = () => {
   return (
     <Navigator>
       <Screen name="Home" component={Home} options={{ headerShown: false }} />
@@ -47,3 +48,5 @@ export function AppStack() {
     </Navigator>
   );
 }
+
+export default AppStack;

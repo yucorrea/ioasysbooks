@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { TouchableOpacityProps, ActivityIndicator } from 'react-native';
 import styled, { useTheme } from 'styled-components/native';
 
@@ -9,10 +9,10 @@ import Animated, {
 } from 'react-native-reanimated';
 interface Props extends TouchableOpacityProps {
   title?: string;
-  loading: boolean;
+  loading?: boolean;
 }
 
-export function Button({ title, loading = false, ...rest }: Props) {
+const Button : React.FC<Props>  = ({ title, loading = false, ...rest })  => {
   const { colors } = useTheme();
 
   const width = useSharedValue(86);
@@ -65,3 +65,5 @@ const StyledButtonText = styled(Animated.Text)`
   font-size: 16px;
   font-family: ${({ theme }) => theme.fonts.medium};
 `;
+
+export default memo(Button);

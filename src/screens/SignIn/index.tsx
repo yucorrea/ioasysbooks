@@ -10,7 +10,7 @@ import { RootState } from '../../store/store';
 import background from './../../assets/images/background.png';
 import logo from './../../assets/images/Logo.png';
 
-import { Input } from '../../components/Input';
+import  Input  from '../../components/Input';
 import { LOGIN } from '../../store/slices/userSlice';
 
 const schema = yup.object({
@@ -24,7 +24,7 @@ type FormData = {
   password: string;
 }
 
-export function SignIn() {
+const SignIn  = () => {
   const { loading } = useSelector(( state : RootState) => state.user);
 
   const dispatch = useDispatch();
@@ -114,3 +114,5 @@ const StyledTitle = styled.Text`
 const StyledForm = styled.View`
   height: 224px;
 `;
+
+export default SignIn;

@@ -1,22 +1,24 @@
 import React, { useCallback, useEffect } from 'react';
-import { ActivityIndicator, FlatList } from 'react-native';
+import { ActivityIndicator, FlatList, ListRenderItem } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import styled, { useTheme } from 'styled-components/native';
+import { useNavigation } from '@react-navigation/core';
 
+import { Book as BookData, BookDetailNavigationProp } from '../../routes/AppStack';
 import logo from './../../assets/images/LogoDark.png';
-import { Filter } from '../../components/Filter';
-import { IconButton } from '../../components/IconButton';
-import { Book } from '../../components/Book';
+import  Filter  from '../../components/Filter';
+import  IconButton  from '../../components/IconButton';
+import  Book  from '../../components/Book';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
 import { LOGOUT } from '../../store/slices/userSlice';
 
 import { RootState } from '../../store/store';
 
-export function Home() {
+ const Home = () => {
+  const { navigate } = useNavigation<BookDetailNavigationProp>();
   const { colors } = useTheme();
   const dispatch = useDispatch();
-
   const {
     books,
     page,
@@ -48,6 +50,10 @@ export function Home() {
     ) : null;
   }, [loading]);
 
+  const renderItemBook: ListRenderItem<BookData> = useCallback(({ item }) => {
+    return <Book data={item} onPress={() => navigate('BookDetail', {book: item})}/>
+  },[]);
+
   return (
     <StyledContainer>
       <StyledHeaderContainer>
@@ -67,7 +73,7 @@ export function Home() {
       <FlatList
         data={books}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Book data={item} />}
+        renderItem={renderItemBook}
         onEndReached={loadMore}
         onEndReachedThreshold={0.1}
         ListFooterComponent={renderFooter}
@@ -108,3 +114,4 @@ const StyledTitle = styled.Text`
   color: ${({ theme }) => theme.colors.title};
 `;
 
+export default Home;
