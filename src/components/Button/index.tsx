@@ -12,7 +12,7 @@ interface Props extends TouchableOpacityProps {
   loading: boolean;
 }
 
-export function Button({ title, loading = true, ...rest }: Props) {
+export function Button({ title, loading = false, ...rest }: Props) {
   const { colors } = useTheme();
 
   const width = useSharedValue(86);
