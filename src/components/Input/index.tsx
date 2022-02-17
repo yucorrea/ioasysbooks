@@ -6,10 +6,11 @@ import { Button } from '../Button';
 interface Props extends TextInputProps {
   label: string;
   enableButton?: boolean;
+  loading?: boolean;
   onPress?: (event: GestureResponderEvent) => void;
 }
 
-function InputComponent({ label, enableButton, onPress, ...rest }: Props) {
+function InputComponent({ label, enableButton, loading = false,  onPress, ...rest }: Props) {
   return (
     <StyledContainer>
       <StyledWrapper>
@@ -17,7 +18,7 @@ function InputComponent({ label, enableButton, onPress, ...rest }: Props) {
         <StyledTextInput underlineColorAndroid="transparent" {...rest} />
       </StyledWrapper>
 
-      {enableButton && <StyledButtonInput title="Entrar" onPress={onPress} />}
+      {enableButton && <StyledButtonInput loading={loading} title="Entrar" onPress={onPress} />}
     </StyledContainer>
   );
 }
@@ -53,7 +54,7 @@ const StyledTextInput = styled.TextInput`
 `;
 
 const StyledButtonInput = styled(Button)`
-  width: 85px;
+  flex: 1;
 `;
 
 export const Input = memo(InputComponent);

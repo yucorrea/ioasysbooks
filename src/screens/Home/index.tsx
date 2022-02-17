@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled, { useTheme } from 'styled-components/native';
 import { useNavigation } from '@react-navigation/core';
 
-import { BookDetailNavigationProp } from '../../routes/AppStack';
+import { Book as BookData, BookDetailNavigationProp } from '../../routes/AppStack';
 import logo from './../../assets/images/LogoDark.png';
 import { Filter } from '../../components/Filter';
 import { IconButton } from '../../components/IconButton';
@@ -50,7 +50,7 @@ export function Home() {
     ) : null;
   }, [loading]);
 
-  const renderItemBook: ListRenderItem<any> = useCallback(({ item }) => {
+  const renderItemBook: ListRenderItem<BookData> = useCallback(({ item }) => {
     return <Book data={item} onPress={() => navigate('BookDetail', {book: item})}/>
   },[]);
 

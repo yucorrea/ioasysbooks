@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
 import styled from 'styled-components/native';
 import { TouchableOpacityProps } from 'react-native';
+import { Book as BookData } from '../../routes/AppStack';
 
 interface Props extends TouchableOpacityProps {
-  data: any;
+  data: BookData;
   onPress: () => void
 }
 

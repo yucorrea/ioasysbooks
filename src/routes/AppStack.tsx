@@ -4,7 +4,8 @@ import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-na
 import { Home } from '../screens/Home';
 import { BookDetail } from '../screens/BookDetail';
 
-interface Book {
+export interface Book {
+  id: string;
   imageUrl: string;
   title: string;
   pageCount: number;
