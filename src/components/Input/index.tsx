@@ -52,7 +52,9 @@ const StyledLabel = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
-const StyledTextInput = styled.TextInput`
+const StyledTextInput = styled.TextInput.attrs( ({theme })=> ({
+  placeholderTextColor: theme.colors.text_light,
+}))`
   width: 100%;
   margin-top: 4px;
   color: ${({ theme }) => theme.colors.shape};
