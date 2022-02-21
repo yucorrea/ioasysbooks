@@ -1,0 +1,16 @@
+{
+  "preset": "react-native",
+  "testPathIgnorePatterns": [
+    "/node_modules",
+    "/ios",
+    "/android"
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "__tests__/**/*.tsx",
+    "src/**/*.tsx",
+    "!/src/**/*.spec.tsx"
+  ],
+  "coverageReporters": ["lcov"],
+  "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"]
+}
