@@ -1,8 +1,11 @@
 import React, { memo } from 'react';
 import styled from 'styled-components/native';
-import { TouchableOpacityProps } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
+import Animated, { LightSpeedInLeft } from 'react-native-reanimated';
 import { Book as BookData } from '../../routes/AppStack';
 
+
+const AnimatedStyledContainer = Animated.createAnimatedComponent(TouchableOpacity);
 interface Props extends TouchableOpacityProps {
   data: BookData;
   onPress: () => void
@@ -11,7 +14,10 @@ interface Props extends TouchableOpacityProps {
 const Book : React.FC<Props> = ({ data, onPress, ...rest })  => {
 
   return (
-    <StyledContainer {...rest} onPress={onPress}>
+    <StyledContainer
+      entering={LightSpeedInLeft}
+      onPress={onPress}
+      {...rest}>
       <StyledImage source={{ uri: data.imageUrl }} />
       <StyledWrapper>
         <StyledTitle>{data.title}</StyledTitle>
@@ -27,7 +33,7 @@ const Book : React.FC<Props> = ({ data, onPress, ...rest })  => {
   );
 }
 
-const StyledContainer = styled.TouchableOpacity`
+const StyledContainer = styled(AnimatedStyledContainer)`
   flex-direction: row;
   width: 100%;
   height: 160px;
