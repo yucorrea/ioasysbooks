@@ -1,0 +1,22 @@
+{
+  "preset": "react-native",
+  "setupFiles": [
+    "<rootDir>/__tests__/jest.setup.js"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules",
+    "/ios",
+    "/android",
+    "<rootDir>/__tests__/jest.setup.js"
+  ],
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "__tests__/**/*.tsx",
+    "src/**/*.tsx",
+    "!/src/**/*.spec.tsx"
+  ],
+  "setupFilesAfterEnv": [ "@testing-library/jest-native/extend-expect"],
+  "transformIgnorePatterns": [
+    "node_modules/(?!@react-native|react-native)"
+  ]
+}
