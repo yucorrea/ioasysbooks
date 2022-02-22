@@ -8,8 +8,13 @@ const persistConfig = {
   whiteList: ['token'],
 };
 
-import user from './userSlice';
-import books from './booksSlice';
+import user, { userState } from './userSlice';
+import books, { booksState } from './booksSlice';
+
+export const globalState = {
+  user: userState,
+  books: booksState
+}
 
 export default combineReducers({
   user: persistReducer(persistConfig, user),
