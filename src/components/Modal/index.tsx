@@ -1,24 +1,24 @@
 import React, { memo } from 'react';
-import { Modal, Dimensions } from 'react-native';
+import { Modal, Dimensions, ModalProps } from 'react-native';
 import styled from 'styled-components/native';
 
 const { width, height } = Dimensions.get('window');
 
 import  IconButton  from '../IconButton';
-interface Props {
+interface Props extends ModalProps {
   show: boolean;
   close: () => void;
   children: React.ReactNode;
 }
 
-const ModalComponent : React.FC<Props> =  ({ show, close, children }) => {
+const ModalComponent : React.FC<Props> =  ({ show, close, children, ...rest }) => {
 
   return (
-    <Modal visible={show} onRequestClose={close} animationType="fade" transparent>
+    <Modal visible={show} onRequestClose={close} animationType="fade" transparent {...rest}>
       <StyledModalContainer>
         <StyledModalContent>
           <StyledHeader>
-            <IconButton onPress={close} icon="close-outline" />
+            <IconButton testID="button-modal-close" onPress={close} icon="close-outline" />
           </StyledHeader>
           {children}
         </StyledModalContent>

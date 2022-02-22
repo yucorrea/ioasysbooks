@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component matches snapshots 1`] = `
+<Modal
+  animationType="fade"
+  hardwareAccelerated={false}
+  onRequestClose={[MockFunction]}
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "height": 1334,
+          "justifyContent": "center",
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderRadius": 4,
+            "paddingBottom": 16,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 16,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "flex-end",
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderColor": "rgba(51, 51, 51, 0.2)",
+              "borderRadius": 16,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "height": 32,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 32,
+            }
+          }
+          testID="button-modal-close"
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#333333",
+                  "fontSize": 16,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        testID="children-component"
+      >
+        <Text>
+          Modal
+        </Text>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;
+
+exports[`Modal Component matches snapshots 2`] = `undefined`;

@@ -33,23 +33,24 @@ import { GET_BOOKS } from '../../store/slices/booksSlice';
       <StyledContainer>
         <StyledInputContainer>
           <StyledInput
+            testID='input-search'
             placeholder="Procure um livro"
             placeholderTextColor={colors.text}
             value={search}
             onChangeText={e => setSearch(e)}
             onSubmitEditing={handleInputSearch}
           />
-          <StyledSearchButton onPress={handleInputSearch}>
+          <StyledSearchButton testID='button-search' onPress={handleInputSearch}>
             <Icon name="search-outline" size={24} color={colors.title} />
           </StyledSearchButton>
         </StyledInputContainer>
 
-        <StyledOptionButton onPress={() => setModal(true)}>
+        <StyledOptionButton testID="button-show-modal" onPress={() => setModal(true)}>
           <Icon color={colors.title} name="options-outline" size={24} />
         </StyledOptionButton>
       </StyledContainer>
 
-      <ModalComponent show={modal} close={() => setModal(false)}>
+      <ModalComponent testID='modal-component' show={modal} close={() => setModal(false)}>
         <StyledTitle>Selecione a categoria</StyledTitle>
         <StyledOptionsFilter>
           {categories.map(option => (
