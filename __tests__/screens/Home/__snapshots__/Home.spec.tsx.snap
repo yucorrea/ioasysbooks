@@ -1,0 +1,1178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen matches snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f6f5ef",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "marginTop": 40,
+          "paddingBottom": 0,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/images/LogoDark.png",
+            }
+          }
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#333333",
+                "fontFamily": "Heebo-Light",
+                "fontSize": 28,
+                "marginLeft": 16,
+              },
+            ]
+          }
+        >
+          Books
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderColor": "rgba(51, 51, 51, 0.2)",
+            "borderRadius": 16,
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "height": 32,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 32,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#333333",
+                "fontSize": 16,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 32,
+            "marginLeft": 0,
+            "marginRight": 0,
+            "marginTop": 32,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderColor": "rgba(51, 51, 51, 0.2)",
+              "borderRadius": 2,
+              "borderStyle": "solid",
+              "borderWidth": 1,
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "height": 48,
+              "justifyContent": "space-between",
+              "marginRight": 22,
+            },
+          ]
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          onSubmitEditing={[Function]}
+          placeholder="Procure um livro"
+          placeholderTextColor="#999999"
+          style={
+            Array [
+              Object {
+                "color": "#999999",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "fontFamily": "Heebo-Medium",
+                "fontSize": 12,
+                "height": 48,
+                "marginLeft": 11,
+              },
+            ]
+          }
+          value=""
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          nativeID="animatedComponent"
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginRight": 20,
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#333333",
+                  "fontSize": 24,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        nativeID="animatedComponent"
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#333333",
+                "fontSize": 24,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Ionicons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <Modal
+      animationType="fade"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      transparent={true}
+      visible={false}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(0, 0, 0, 0.5)",
+              "height": 1334,
+              "justifyContent": "center",
+              "paddingBottom": 16,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 16,
+              "width": 750,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#ffffff",
+                "borderRadius": 4,
+                "paddingBottom": 16,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 16,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-end",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 16,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "height": 32,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                  "width": 32,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontSize": 16,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "Ionicons",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#333333",
+                  "fontFamily": "Heebo-Medium",
+                  "fontSize": 12,
+                },
+              ]
+            }
+          >
+            Selecione a categoria
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "marginBottom": 36,
+                  "marginTop": 8,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                Design
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                UX Design
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                UI Design
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                Arquitetura da Informação
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                CSS
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                Usabilidade
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                Design Thinking
+              </Text>
+            </View>
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#333333",
+                  "fontFamily": "Heebo-Medium",
+                  "fontSize": 12,
+                },
+              ]
+            }
+          >
+            Selecione o ano
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "marginBottom": 36,
+                  "marginTop": 8,
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2015
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2016
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2017
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2018
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2019
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2020
+              </Text>
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "rgba(51, 51, 51, 0.2)",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 8,
+                  "marginLeft": 0,
+                  "marginRight": 8,
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                selected={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#333333",
+                      "fontFamily": "Heebo-Regular",
+                      "fontSize": 12,
+                      "paddingBottom": 6,
+                      "paddingLeft": 16,
+                      "paddingRight": 16,
+                      "paddingTop": 6,
+                    },
+                  ]
+                }
+              >
+                2021
+              </Text>
+            </View>
+          </View>
+          <View
+            animatedStyle={
+              Object {
+                "value": Object {
+                  "height": 36,
+                  "width": 86,
+                },
+              }
+            }
+            collapsable={false}
+            style={
+              Object {
+                "height": 36,
+                "width": 86,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              nativeID="animatedComponent"
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#B22E6F",
+                  "borderRadius": 44,
+                  "borderStyle": "solid",
+                  "borderWidth": 1,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                animatedStyle={
+                  Object {
+                    "value": Object {
+                      "opacity": 1,
+                    },
+                  }
+                }
+                collapsable={false}
+                style={
+                  Object {
+                    "color": "#B22E6F",
+                    "fontFamily": "Heebo-Medium",
+                    "fontSize": 16,
+                    "opacity": 1,
+                  }
+                }
+              >
+                Filtar
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+  <RCTScrollView
+    ListFooterComponent={[Function]}
+    contentContainerStyle={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }
+    data={Array []}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.1}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+      />
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

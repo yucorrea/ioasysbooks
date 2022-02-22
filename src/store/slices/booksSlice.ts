@@ -60,5 +60,6 @@ const booksSlice = createSlice({
 
 const { actions, reducer } = booksSlice;
 
+export const booksState = initialState;
 export const { GET_BOOKS, GET_BOOKS_FAILURE, GET_BOOKS_SUCCESS } = actions;
 export default reducer;
