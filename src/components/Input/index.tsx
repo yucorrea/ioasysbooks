@@ -25,7 +25,7 @@ const Input: React.FC<Props> = ({
       </StyledWrapper>
 
       {enableButton && (
-        <StyledButtonInput loading={loading} title="Entrar" onPress={onPress} />
+        <StyledButtonInput testID='input-button' loading={loading} title="Entrar" onPress={onPress} />
       )}
     </StyledContainer>
   );

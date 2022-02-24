@@ -101,6 +101,7 @@ exports[`Home Screen matches snapshot 1`] = `
             "width": 32,
           }
         }
+        testID="button-logout"
       >
         <Text
           allowFontScaling={false}
@@ -1079,68 +1080,79 @@ exports[`Home Screen matches snapshot 1`] = `
             </View>
           </View>
           <View
-            animatedStyle={
-              Object {
-                "value": Object {
-                  "height": 36,
-                  "width": 86,
-                },
-              }
-            }
-            collapsable={false}
             style={
-              Object {
-                "height": 36,
-                "width": 86,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "width": "100%",
+                },
+              ]
             }
           >
             <View
-              accessible={true}
+              animatedStyle={
+                Object {
+                  "value": Object {
+                    "height": 36,
+                    "width": 86,
+                  },
+                }
+              }
               collapsable={false}
-              focusable={true}
-              nativeID="animatedComponent"
-              onClick={[Function]}
-              onResponderGrant={[Function]}
-              onResponderMove={[Function]}
-              onResponderRelease={[Function]}
-              onResponderTerminate={[Function]}
-              onResponderTerminationRequest={[Function]}
-              onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#B22E6F",
-                  "borderRadius": 44,
-                  "borderStyle": "solid",
-                  "borderWidth": 1,
-                  "justifyContent": "center",
-                  "opacity": 1,
+                  "height": 36,
+                  "width": 86,
                 }
               }
             >
-              <Text
-                animatedStyle={
-                  Object {
-                    "value": Object {
-                      "opacity": 1,
-                    },
-                  }
-                }
+              <View
+                accessible={true}
                 collapsable={false}
+                focusable={true}
+                nativeID="animatedComponent"
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
                 style={
                   Object {
-                    "color": "#B22E6F",
-                    "fontFamily": "Heebo-Medium",
-                    "fontSize": 16,
+                    "alignItems": "center",
+                    "backgroundColor": "#ffffff",
+                    "borderColor": "#B22E6F",
+                    "borderRadius": 44,
+                    "borderStyle": "solid",
+                    "borderWidth": 1,
+                    "justifyContent": "center",
                     "opacity": 1,
                   }
                 }
               >
-                Filtar
-              </Text>
+                <Text
+                  animatedStyle={
+                    Object {
+                      "value": Object {
+                        "opacity": 1,
+                      },
+                    }
+                  }
+                  collapsable={false}
+                  style={
+                    Object {
+                      "color": "#B22E6F",
+                      "fontFamily": "Heebo-Medium",
+                      "fontSize": 16,
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  Filtar
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -1171,6 +1183,7 @@ exports[`Home Screen matches snapshot 1`] = `
     renderItem={[Function]}
     scrollEventThrottle={50}
     stickyHeaderIndices={Array []}
+    testID="books-list"
     viewabilityConfigCallbackPairs={Array []}
   >
     <View>

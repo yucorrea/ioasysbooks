@@ -148,6 +148,7 @@ exports[`SignIn Screen matches snapshot 1`] = `
               },
             ]
           }
+          testID="input-email"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -212,6 +213,7 @@ exports[`SignIn Screen matches snapshot 1`] = `
               },
             ]
           }
+          testID="input-password"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -257,6 +259,7 @@ exports[`SignIn Screen matches snapshot 1`] = `
               "opacity": 1,
             }
           }
+          testID="input-button"
         >
           <Text
             animatedStyle={

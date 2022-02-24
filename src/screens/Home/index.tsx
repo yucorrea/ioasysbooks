@@ -64,13 +64,14 @@ import { RootState } from '../../store/store';
             <StyledTitle>Books</StyledTitle>
           </StyledLogoContainer>
 
-          <IconButton onPress={handleLogout} icon="log-out-outline" />
+          <IconButton testID='button-logout' onPress={handleLogout} icon="log-out-outline" />
         </StyledHeader>
 
         <Filter />
       </StyledHeaderContainer>
 
       <FlatList
+        testID='books-list'
         data={books}
         keyExtractor={item => item.id}
         renderItem={renderItemBook}

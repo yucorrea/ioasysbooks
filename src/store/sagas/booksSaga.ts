@@ -47,7 +47,6 @@ export function* getAllBooks({payload} : PayloadAction<FilterData>) {
     );
 
   } catch (err) {
-    console.log(err)
     yield put(GET_BOOKS_FAILURE('Não foi possível buscar os livros.'));
   }
 }
