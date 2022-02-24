@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttom Component matches snapshots 1`] = `
+<View
+  animatedStyle={
+    Object {
+      "value": Object {
+        "height": 36,
+        "width": 86,
+      },
+    }
+  }
+  collapsable={false}
+  style={
+    Object {
+      "height": 36,
+      "width": 86,
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    nativeID="animatedComponent"
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "animatedStyle": Object {
+          "current": Object {},
+        },
+        "backgroundColor": "#ffffff",
+        "borderRadius": 44,
+        "initial": Object {
+          "updater": [Function],
+          "value": Object {
+            "height": 36,
+            "width": 86,
+          },
+        },
+        "justifyContent": "center",
+        "opacity": 1,
+        "viewDescriptors": Object {
+          "add": [Function],
+          "batchToRemove": Object {},
+          "items": Array [
+            Object {
+              "name": undefined,
+              "tag": undefined,
+            },
+          ],
+          "rebuildsharableViewDescriptors": [Function],
+          "remove": [Function],
+          "sharableViewDescriptors": Object {
+            "_animation": null,
+            "_id": 6,
+            "_listeners": Array [],
+            "_setter": [Function],
+            "_value": Array [],
+          },
+          "tags": Object {},
+          "waitForInsertSync": false,
+          "waitForRemoveSync": false,
+        },
+        "viewsRef": Object {
+          "add": [Function],
+          "items": Object {},
+          "remove": [Function],
+        },
+      }
+    }
+  >
+    <Text
+      animatedStyle={
+        Object {
+          "value": Object {
+            "opacity": 1,
+          },
+        }
+      }
+      collapsable={false}
+      style={
+        Object {
+          "color": "#B22E6F",
+          "fontFamily": "Heebo-Medium",
+          "fontSize": 16,
+          "opacity": 1,
+        }
+      }
+    >
+      Click-me
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Buttom Component matches snapshots 2`] = `undefined`;

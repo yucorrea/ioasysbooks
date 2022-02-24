@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttom Component matches snapshots 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.32)",
+        "borderRadius": 4,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "paddingBottom": 8,
+        "paddingLeft": 13,
+        "paddingRight": 16,
+        "paddingTop": 8,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "rgba(255,255,255,0.5)",
+            "fontFamily": "Heebo-Regular",
+            "fontSize": 12,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      E-mail
+    </Text>
+    <TextInput
+      onChangeText={[MockFunction]}
+      placeholder="Seu e-mail"
+      placeholderTextColor="rgba(255,255,255,0.5)"
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Heebo-Regular",
+            "fontSize": 16,
+            "marginTop": 4,
+            "width": "100%",
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="email@email.com"
+    />
+  </View>
+  <View
+    animatedStyle={
+      Object {
+        "value": Object {
+          "height": 36,
+          "width": 86,
+        },
+      }
+    }
+    collapsable={false}
+    style={
+      Object {
+        "height": 36,
+        "width": 86,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      nativeID="animatedComponent"
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 44,
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        animatedStyle={
+          Object {
+            "value": Object {
+              "opacity": 1,
+            },
+          }
+        }
+        collapsable={false}
+        style={
+          Object {
+            "color": "#B22E6F",
+            "fontFamily": "Heebo-Medium",
+            "fontSize": 16,
+            "opacity": 1,
+          }
+        }
+      >
+        Entrar
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Buttom Component matches snapshots 2`] = `undefined`;

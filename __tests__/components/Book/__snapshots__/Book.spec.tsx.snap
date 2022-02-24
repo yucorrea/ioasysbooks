@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttom Component matches snapshots 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  forwardedRef={[Function]}
+  nativeID="animatedComponent"
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "borderRadius": 4,
+      "flexDirection": "row",
+      "height": 160,
+      "marginBottom": 16,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 16,
+      "opacity": 1,
+      "paddingBottom": 19,
+      "paddingLeft": 16,
+      "paddingRight": 16,
+      "paddingTop": 19,
+      "width": "100%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "image.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "height": 112,
+          "marginRight": 16,
+          "width": 81,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#333333",
+            "fontFamily": "Heebo-Medium",
+            "fontSize": 14,
+          },
+        ]
+      }
+    >
+      Book Title
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#AB2680",
+            "fontFamily": "Heebo-Regular",
+            "fontSize": 12,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "marginTop": 25,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#999999",
+              "fontFamily": "Heebo-Regular",
+              "fontSize": 12,
+            },
+          ]
+        }
+      >
+        1
+         páginas
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#999999",
+              "fontFamily": "Heebo-Regular",
+              "fontSize": 12,
+            },
+          ]
+        }
+      >
+        Editora 
+        
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#999999",
+              "fontFamily": "Heebo-Regular",
+              "fontSize": 12,
+            },
+          ]
+        }
+      >
+        Publicado em 
+        0
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Buttom Component matches snapshots 2`] = `undefined`;
