@@ -81,7 +81,9 @@ import { GET_BOOKS } from '../../store/slices/booksSlice';
           ))}
         </StyledOptionsFilter>
 
-        <StyledButtonFilter onPress={handleApplyFilters} title="Filtar" />
+        <StyledFooterActions>
+          <StyledButtonFilter onPress={handleApplyFilters} title="Filtar" />
+        </StyledFooterActions>
       </ModalComponent>
     </>
   );
@@ -125,8 +127,13 @@ const StyledSearchButton = styled.TouchableOpacity`
 
 const StyledOptionButton = styled.TouchableOpacity``;
 
+const StyledFooterActions = styled.View`
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
 const StyledButtonFilter = styled(Button)`
-  align-self: center;
   border: 1px solid ${({ theme }) => theme.colors.primary};
 `;
 

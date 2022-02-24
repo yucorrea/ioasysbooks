@@ -53,6 +53,7 @@ const SignIn  = () => {
           name="email"
           render={({field: {onChange, value}}) => (
             <Input
+              testID='input-email'
               label="Email"
               value={value}
               // error={errors?.email?.message}
@@ -70,6 +71,7 @@ const SignIn  = () => {
           name="password"
           render={({field: {onChange, value}}) => (
             <Input
+              testID='input-password'
               label="Senha"
               value={value}
                // error={errors?.password?.message}

@@ -104,6 +104,7 @@ exports[`Buttom Component matches snapshots 1`] = `
           "opacity": 1,
         }
       }
+      testID="input-button"
     >
       <Text
         animatedStyle={
