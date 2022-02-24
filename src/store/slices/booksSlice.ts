@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Book } from '../../routes/AppStack';
 
 interface INITIAL_STATE {
   loading: boolean;
@@ -45,7 +46,7 @@ const booksSlice = createSlice({
       state.filter.category = payload.category;
       state.filter.year  = payload.year;
     },
-    GET_BOOKS_SUCCESS: (state, { payload }: PayloadAction<any>) => {
+    GET_BOOKS_SUCCESS: (state, { payload }: PayloadAction<{books: Book[], totalPages: number, page: number}>) => {
       state.loading = false;
       state.page = payload.page;
       state.totalPages = payload.totalPages;

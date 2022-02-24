@@ -1,7 +1,7 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Alert } from 'react-native';
 import { call, takeEvery, put } from 'redux-saga/effects';
-import api from '../../config/api';
+import api, { setTokenAPI } from '../../config/api';
 
 import {
   LOGIN,
@@ -9,12 +9,12 @@ import {
   LOGIN_FAILURE
 } from '../slices/userSlice';
 
-interface Credentials {
+export interface Credentials {
     email: string;
     password: string;
 }
 
-function* signIn({ payload }: PayloadAction<Credentials>) {
+export function* signIn({ payload }: PayloadAction<Credentials>) {
   try {
     const { email, password } = payload;
 
@@ -25,9 +25,7 @@ function* signIn({ payload }: PayloadAction<Credentials>) {
     });
 
     const { authorization } = response.headers;
-
-    api.defaults.headers.Authorization = `Bearer ${authorization}`;
-
+    setTokenAPI(authorization);
 
     yield put(LOGIN_SUCCESS({
       user: response.data,
