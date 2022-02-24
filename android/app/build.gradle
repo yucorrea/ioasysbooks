@@ -131,6 +131,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
+
+        //Detox
+        testBuildType System.getProperty('testBuildType', 'debug')
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     splits {
         abi {
@@ -197,6 +202,9 @@ dependencies {
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
     }
+
+    //Detox
+    androidTestImplementation('com.wix:detox:+')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
