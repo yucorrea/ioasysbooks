@@ -9,11 +9,11 @@
     "/android",
     "<rootDir>/__tests__/jest.setup.js"
   ],
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": [
-    "__tests__/**/*.tsx",
-    "src/**/*.tsx",
-    "!/src/**/*.spec.tsx"
+    "__tests__/**/*.{tsx,ts}",
+    "src/**/*.{tsx,ts}",
+    "!/src/**/*.spec.{tsx,ts}"
   ],
   "setupFilesAfterEnv": [ "@testing-library/jest-native/extend-expect"],
   "transformIgnorePatterns": [

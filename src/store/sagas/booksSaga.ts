@@ -9,14 +9,14 @@ import {
 } from '../slices/booksSlice';
 import { RootState } from '../store';
 
-interface FilterData {
+export interface FilterData {
     search?: string;
     year?: string;
     category?: string;
     page: number;
 }
 
-function* getAllBooks({payload} : PayloadAction<FilterData>) {
+export function* getAllBooks({payload} : PayloadAction<FilterData>) {
   try {
 
     const { search, year, category, page = 1 } = payload;
@@ -47,6 +47,7 @@ function* getAllBooks({payload} : PayloadAction<FilterData>) {
     );
 
   } catch (err) {
+    console.log(err)
     yield put(GET_BOOKS_FAILURE('Não foi possível buscar os livros.'));
   }
 }
