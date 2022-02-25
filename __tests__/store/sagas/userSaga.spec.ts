@@ -1,10 +1,10 @@
 
 import { PayloadAction } from '@reduxjs/toolkit';
 import { runSaga, Saga } from 'redux-saga';
-import api, { setTokenAPI } from '../../../src/config/api';
+import api, { setTokenAPI } from '@config/api';
 
-import { Credentials, signIn } from '../../../src/store/sagas/userSaga';
-import {LOGIN_FAILURE, LOGIN_SUCCESS } from '../../../src/store/slices/userSlice';
+import { Credentials, signIn } from '@store/sagas/userSaga';
+import {LOGIN_FAILURE, LOGIN_SUCCESS } from '@store/slices/userSlice';
 
 describe('userSaga', () => {
 

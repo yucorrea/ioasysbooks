@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Book } from '../../routes/AppStack';
+import { Book } from '@routes/AppStack';
 
 interface INITIAL_STATE {
   loading: boolean;

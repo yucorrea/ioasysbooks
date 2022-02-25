@@ -4,7 +4,7 @@ import styled from 'styled-components/native';
 
 const { width, height } = Dimensions.get('window');
 
-import  IconButton  from '../IconButton';
+import  IconButton  from '@components/IconButton';
 interface Props extends ModalProps {
   show: boolean;
   close: () => void;

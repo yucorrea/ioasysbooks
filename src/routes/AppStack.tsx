@@ -1,8 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-import Home  from '../screens/Home';
-import BookDetail  from '../screens/BookDetail';
+import Home  from '@screens/Home';
+import BookDetail  from '@screens/BookDetail';
 
 export interface Book {
   id: string;

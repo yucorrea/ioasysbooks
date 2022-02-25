@@ -1,7 +1,7 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { globalState } from './../src/store/slices';
+import { globalState } from '@store/slices';
 
 jest.mock('@react-navigation/core', () => {
   return {

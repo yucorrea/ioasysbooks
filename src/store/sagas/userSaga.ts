@@ -1,13 +1,13 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Alert } from 'react-native';
 import { call, takeEvery, put } from 'redux-saga/effects';
-import api, { setTokenAPI } from '../../config/api';
+import api, { setTokenAPI } from '@config/api';
 
 import {
   LOGIN,
   LOGIN_SUCCESS,
   LOGIN_FAILURE
-} from '../slices/userSlice';
+} from '@store/slices/userSlice';
 
 export interface Credentials {
     email: string;

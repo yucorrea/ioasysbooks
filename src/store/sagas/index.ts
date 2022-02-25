@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 
-import userSaga from './userSaga';
-import booksSaga from './booksSaga';
+import userSaga from '@store/sagas/userSaga';
+import booksSaga from '@store/sagas/booksSaga';
 
 function* rootSagas() {
   yield all([userSaga(), booksSaga()]);

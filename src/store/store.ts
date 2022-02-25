@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose } from '@reduxjs/toolkit';
-import Reactotron from './../config/reactotron-config'
+import Reactotron from '@config/reactotron-config'
 
 import createSagaMiddleware from 'redux-saga';
 import { persistStore } from 'redux-persist';
 
-import sagas from './sagas';
-import reducers from './slices';
+import sagas from '@store/sagas';
+import reducers from '@store/slices';
 
 const sagaMonitor = Reactotron.createSagaMonitor!();
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor });

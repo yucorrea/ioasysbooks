@@ -1,11 +1,8 @@
 import React from 'react';
 import { fireEvent } from "@testing-library/react-native";
 
-import Input from '../../../src/components/Input';
-import {
-  matchSnapshotWithTheme,
-  renderWithTheme,
-} from '../../../src/helpers/functions/testing';
+import Input from '@components/Input';
+import { matchSnapshotWithTheme, renderWithTheme } from '@helpers/functions/testing';
 
 describe('Buttom Component', () => {
 

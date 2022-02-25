@@ -3,10 +3,10 @@ import { useNavigation, useRoute } from '@react-navigation/core';
 import type { RouteProp } from '@react-navigation/native';
 import styled from 'styled-components/native';
 
-import { AppStackParamList } from '../../routes/AppStack';
+import { AppStackParamList } from '@routes/AppStack';
 
-import  IconButton  from '../../components/IconButton';
-import mark from '../../assets/images/mark.png';
+import  IconButton  from '@components/IconButton';
+import mark from '@assets/images/mark.png';
 
 type BookDetailRouteProp = RouteProp<AppStackParamList, 'BookDetail'>;
 
