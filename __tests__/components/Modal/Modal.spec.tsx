@@ -1,12 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import Modal from '../../../src/components/Modal';
+import Modal from '@components/Modal';
 
-import {
-  matchSnapshotWithTheme,
-  renderWithTheme,
-} from '../../../src/helpers/functions/testing';
+import { matchSnapshotWithTheme, renderWithTheme } from '@helpers/functions/testing';
 
 const Children = () => {
   return (

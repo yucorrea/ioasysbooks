@@ -6,9 +6,9 @@ import { useNavigation } from '@react-navigation/core';
 
 import { Book as BookData, BookDetailNavigationProp } from '../../routes/AppStack';
 import logo from './../../assets/images/LogoDark.png';
-import  Filter  from '../../components/Filter';
-import  IconButton  from '../../components/IconButton';
-import  Book  from '../../components/Book';
+import  Filter  from '@components/Filter';
+import  IconButton  from '@components/IconButton';
+import  Book  from '@components/Book';
 
 import { GET_BOOKS } from '../../store/slices/booksSlice';
 import { LOGOUT } from '../../store/slices/userSlice';

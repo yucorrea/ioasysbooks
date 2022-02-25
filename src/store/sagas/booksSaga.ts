@@ -1,13 +1,13 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { call, takeLatest, put, select } from 'redux-saga/effects';
-import api from '../../config/api';
+import api from '@config/api';
 
 import {
   GET_BOOKS,
   GET_BOOKS_FAILURE,
   GET_BOOKS_SUCCESS,
-} from '../slices/booksSlice';
-import { RootState } from '../store';
+} from '@store/slices/booksSlice';
+import { RootState } from '@store/store';
 
 export interface FilterData {
     search?: string;

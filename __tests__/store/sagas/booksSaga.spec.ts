@@ -1,8 +1,8 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { runSaga, Saga} from 'redux-saga';
-import api from '../../../src/config/api';
-import { FilterData, getAllBooks } from './../../../src/store/sagas/booksSaga';
-import { GET_BOOKS_SUCCESS, GET_BOOKS_FAILURE } from './../../../src/store/slices/booksSlice';
+import api from '@config/api';
+import { FilterData, getAllBooks } from '@store/sagas/booksSaga';
+import { GET_BOOKS_SUCCESS, GET_BOOKS_FAILURE } from '@store/slices/booksSlice';
 
 describe('booksSaga', () => {
 

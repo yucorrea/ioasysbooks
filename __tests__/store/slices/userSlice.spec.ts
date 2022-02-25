@@ -1,6 +1,6 @@
 
 import { AnyAction } from '@reduxjs/toolkit';
-import reducer, { LOGIN, LOGOUT, LOGIN_SUCCESS, LOGIN_FAILURE } from '../../../src/store/slices/userSlice';
+import reducer, { LOGIN, LOGOUT, LOGIN_SUCCESS, LOGIN_FAILURE } from '@store/slices/userSlice';
 
 describe('userSlice', () => {
   it('should return initialState', () => {

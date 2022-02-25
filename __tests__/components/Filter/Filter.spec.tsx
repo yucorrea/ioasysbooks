@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react-native';
-import Filter from '../../../src/components/Filter';
-import { matchSnapshotWithTheme, renderWithTheme } from '../../../src/helpers/functions/testing';
+import Filter from '@components/Filter';
+import { matchSnapshotWithTheme, renderWithTheme } from '@helpers/functions/testing';
 
 describe('Filter component', () => {
   it('matches snapshots', () => {

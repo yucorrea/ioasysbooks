@@ -8,8 +8,8 @@ const persistConfig = {
   whiteList: ['token'],
 };
 
-import user, { userState } from './userSlice';
-import books, { booksState } from './booksSlice';
+import user, { userState } from '@store/slices/userSlice';
+import books, { booksState } from '@store/slices/booksSlice';
 
 export const globalState = {
   user: userState,

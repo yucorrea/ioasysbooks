@@ -1,7 +1,7 @@
 import React from 'react';
-import { matchSnapshotWithTheme, renderWithTheme } from '../../../src/helpers/functions/testing';
+import { matchSnapshotWithTheme, renderWithTheme } from '@helpers/functions/testing';
 
-import Home from '../../../src/screens/Home';
+import Home from '@screens/Home';
 
 describe('Home Screen', () => {
   test('matches snapshot', () => {

@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components/native';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import Animated, { LightSpeedInLeft } from 'react-native-reanimated';
-import { Book as BookData } from '../../routes/AppStack';
+import { Book as BookData } from '@routes/AppStack';
 
 
 const AnimatedStyledContainer = Animated.createAnimatedComponent(TouchableOpacity);

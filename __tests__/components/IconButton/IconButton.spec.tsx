@@ -1,10 +1,7 @@
 import React from 'react';
 
-import IconButton from '../../../src/components/IconButton';
-import {
-  matchSnapshotWithTheme,
-  renderWithTheme,
-} from '../../../src/helpers/functions/testing';
+import IconButton from '@components/IconButton';
+import { matchSnapshotWithTheme, renderWithTheme } from '@helpers/functions/testing';
 
 describe('IconButton Component', () => {
 

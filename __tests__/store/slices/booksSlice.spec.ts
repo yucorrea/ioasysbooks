@@ -1,7 +1,7 @@
 
 import { AnyAction } from '@reduxjs/toolkit';
-import { Book } from '../../../src/routes/AppStack';
-import reducer, {GET_BOOKS, GET_BOOKS_FAILURE, GET_BOOKS_SUCCESS} from '../../../src/store/slices/booksSlice';
+import { Book } from '@routes/AppStack';
+import reducer, {GET_BOOKS, GET_BOOKS_FAILURE, GET_BOOKS_SUCCESS} from '@store/slices/booksSlice';
 
 describe('booksSlice', () => {
 
